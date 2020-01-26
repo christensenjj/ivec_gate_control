@@ -129,3 +129,24 @@ def run_async_server():
     # StartSerialServer(context, identity=identity,
     #                   port='/dev/ttyp0', framer=ModbusBinaryFramer)
 
+
+"""
+This function will read the Modbus Memory Context to check for updates
+
+:params ctxt: Memory Context to read
+:returns: Values read from memory context
+"""
+def read_context(ctxt):
+
+
+"""
+This function will write out to the Modbus Memory Context
+
+:params ctxt: Memory context to write to
+:params values: Values to write out
+:returns: NONE
+"""
+def write_update(ctxt, values):
+
+
+
