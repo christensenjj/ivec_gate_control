@@ -13,4 +13,9 @@ Description:
 import actuator_driver
 import gpio_ref
 
+"""
+Callback for edge event on Normally Open/Closed Switch
+"""
+def ncno_callback():
+
 
