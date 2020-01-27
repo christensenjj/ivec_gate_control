@@ -1,0 +1,38 @@
+\hypertarget{gpio__ref_8py}{}\doxysection{gpio\+\_\+ref.\+py File Reference}
+\label{gpio__ref_8py}\index{gpio\_ref.py@{gpio\_ref.py}}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{gpio__ref_8py_a967d07288c29b7ad9827736d1c841b5b}\label{gpio__ref_8py_a967d07288c29b7ad9827736d1c841b5b}} 
+def \mbox{\hyperlink{gpio__ref_8py_a967d07288c29b7ad9827736d1c841b5b}{gpio\+\_\+ref.\+setup\+\_\+gpio}} ()
+\begin{DoxyCompactList}\small\item\em A function for setting all of the G\+P\+IO pins to their necessary states. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{gpio__ref_8py_a9f8b22dcb306d537f097727af14be6a7}\label{gpio__ref_8py_a9f8b22dcb306d537f097727af14be6a7}} 
+def \mbox{\hyperlink{gpio__ref_8py_a9f8b22dcb306d537f097727af14be6a7}{gpio\+\_\+ref.\+get\+\_\+ip\+\_\+address}} ()
+\begin{DoxyCompactList}\small\item\em A function for retrieving the current IP address, read from the external D\+IP switch. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{gpio__ref_8py_a3d6950db110ce3bfd1a0d946ca28781d}{gpio\+\_\+ref.\+set\+\_\+led\+\_\+out}} (motion, position, error)
+\begin{DoxyCompactList}\small\item\em A function for setting the status of the L\+E\+Ds. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Title\+: G\+P\+IO Reference Author\+: Jacob Christensen \href{mailto:christensenjj@msoe.edu}{\texttt{ christensenjj@msoe.\+edu}} Date\+: 01/22/2020 Description\+: This file contains methods that provide G\+P\+IO setup and access operations. 
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{gpio__ref_8py_a3d6950db110ce3bfd1a0d946ca28781d}\label{gpio__ref_8py_a3d6950db110ce3bfd1a0d946ca28781d}} 
+\index{gpio\_ref.py@{gpio\_ref.py}!set\_led\_out@{set\_led\_out}}
+\index{set\_led\_out@{set\_led\_out}!gpio\_ref.py@{gpio\_ref.py}}
+\doxysubsubsection{\texorpdfstring{set\_led\_out()}{set\_led\_out()}}
+{\footnotesize\ttfamily def gpio\+\_\+ref.\+set\+\_\+led\+\_\+out (\begin{DoxyParamCaption}\item[{}]{motion,  }\item[{}]{position,  }\item[{}]{error }\end{DoxyParamCaption})}
+
+
+
+A function for setting the status of the L\+E\+Ds. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em motion} & A boolean value that indicates whether or not the gate is in motion \\
+\hline
+{\em position} & An integer in the range 0-\/100 indicating the position of the gate. \\
+\hline
+{\em error} & A boolean value that indicates if an error has occured or if service is needed \\
+\hline
+\end{DoxyParams}
