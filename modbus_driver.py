@@ -1,11 +1,8 @@
-
 ## @file modbus_driver.py
-# Title: Modbus Driver
-# Author: Jacob Christensen <christensenjj@msoe.edu>
-# Date: 01/26/2020
-# Description:
-# 	This file will setup a TCP Modbus Server that monitors and responds to changes in the
-# 	Modbus memory structure.
+# @brief Modbus Driver
+# @author Jacob Christensen <christensenjj@msoe.edu>
+# @date 01/26/2020
+# @details This file will setup a TCP Modbus Server that monitors and responds to changes in the Modbus memory structure.
 
 
 from pymodbus.server.asynchronous import StartTcpServer
@@ -15,7 +12,6 @@ from pymodbus.datastore import ModbusSlaveContext, ModbusServerContext
 from pymodbus.transaction import (ModbusRtuFramer,
                                   ModbusAsciiFramer,
                                   ModbusBinaryFramer)
-from custom_message import CustomModbusRequest
 
 ## Function to configure and start the Modbus Server.
 def run_async_server():
@@ -25,8 +21,6 @@ def run_async_server():
         co=ModbusSequentialDataBlock(0, [17]*100),
         hr=ModbusSequentialDataBlock(0, [17]*100),
         ir=ModbusSequentialDataBlock(0, [17]*100))
-    store.register(CustomModbusRequest.function_code, 'cm',
-                   ModbusSequentialDataBlock(0, [17] * 100))
     context = ModbusServerContext(slaves=store, single=True)
 
     identity = ModbusDeviceIdentification()

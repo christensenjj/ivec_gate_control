@@ -68,6 +68,9 @@ $(function() {
 <div class="title">data_collection.py File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>Data Collection.  
+<a href="#details">More...</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
@@ -76,14 +79,20 @@ def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="data_
 <tr class="memdesc:a6706210a8833b99fb3fc51be7f7c69c6"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function will setup the appropriate pins for communication with the Analog-to-Digital converter. <br /></td></tr>
 <tr class="separator:a6706210a8833b99fb3fc51be7f7c69c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aea1f6c636d90ca079097f54439ab14a3"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="data__collection_8py.html#aea1f6c636d90ca079097f54439ab14a3">data_collection.get_current</a> ()</td></tr>
-<tr class="memdesc:aea1f6c636d90ca079097f54439ab14a3"><td class="mdescLeft">&#160;</td><td class="mdescRight">This file will read the current from the Hall Effect sensor.  <a href="data__collection_8py.html#aea1f6c636d90ca079097f54439ab14a3">More...</a><br /></td></tr>
+<tr class="memdesc:aea1f6c636d90ca079097f54439ab14a3"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function will read the current from the Hall Effect sensor.  <a href="data__collection_8py.html#aea1f6c636d90ca079097f54439ab14a3">More...</a><br /></td></tr>
 <tr class="separator:aea1f6c636d90ca079097f54439ab14a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:add7e990519217f72d054bd68e2000703"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="data__collection_8py.html#add7e990519217f72d054bd68e2000703">data_collection.get_position</a> ()</td></tr>
-<tr class="memdesc:add7e990519217f72d054bd68e2000703"><td class="mdescLeft">&#160;</td><td class="mdescRight">This file will get the position of the actuator by reading the potentiometer value from the ADC.  <a href="data__collection_8py.html#add7e990519217f72d054bd68e2000703">More...</a><br /></td></tr>
+<tr class="memdesc:add7e990519217f72d054bd68e2000703"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function will get the position of the actuator by reading the potentiometer value from the ADC.  <a href="data__collection_8py.html#add7e990519217f72d054bd68e2000703">More...</a><br /></td></tr>
 <tr class="separator:add7e990519217f72d054bd68e2000703"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0563bc04b8214c79cf726057c88758e7"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="data__collection_8py.html#a0563bc04b8214c79cf726057c88758e7">data_collection.write_data_log</a> (info)</td></tr>
+<tr class="memdesc:a0563bc04b8214c79cf726057c88758e7"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function will write out given information to a log file for future access.  <a href="data__collection_8py.html#a0563bc04b8214c79cf726057c88758e7">More...</a><br /></td></tr>
+<tr class="separator:a0563bc04b8214c79cf726057c88758e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Title: Data Collection Author: Jacob Christensen <a href="#" onclick="location.href='mai'+'lto:'+'chr'+'is'+'ten'+'se'+'njj'+'@m'+'soe'+'.e'+'du'; return false;">chris<span style="display: none;">.nosp@m.</span>tens<span style="display: none;">.nosp@m.</span>enjj@<span style="display: none;">.nosp@m.</span>msoe<span style="display: none;">.nosp@m.</span>.edu</a> Date: 01/26/2020 Description: This file will hold much of the functionality required for gathering and processing data from the peripherals of the microcontroller. This file will also pieces of the data collected back to the memory for future access. </p>
+<div class="textblock"><p>Data Collection. </p>
+<dl class="section author"><dt>Author</dt><dd>Jacob Christensen </dd></dl>
+<dl class="section date"><dt>Date</dt><dd>01/26/2020</dd></dl>
+<p>This file will hold much of the functionality required for gathering and processing data from the peripherals of the microcontroller. This file will also pieces of the data collected back to the memory for future access. </p>
 </div><h2 class="groupheader">Function Documentation</h2>
 <a id="aea1f6c636d90ca079097f54439ab14a3"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aea1f6c636d90ca079097f54439ab14a3">&#9670;&nbsp;</a></span>get_current()</h2>
@@ -100,7 +109,7 @@ def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="data_
       </table>
 </div><div class="memdoc">
 
-<p>This file will read the current from the Hall Effect sensor. </p>
+<p>This function will read the current from the Hall Effect sensor. </p>
 <dl class="section return"><dt>Returns</dt><dd>: A number representing the current being drawn by the actuator </dd></dl>
 
 </div>
@@ -120,8 +129,34 @@ def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="data_
       </table>
 </div><div class="memdoc">
 
-<p>This file will get the position of the actuator by reading the potentiometer value from the ADC. </p>
-<dl class="section return"><dt>Returns</dt><dd>: A number representing the position of the actuator </dd></dl>
+<p>This function will get the position of the actuator by reading the potentiometer value from the ADC. </p>
+<dl class="section return"><dt>Returns</dt><dd>A number representing the position of the actuator </dd></dl>
+
+</div>
+</div>
+<a id="a0563bc04b8214c79cf726057c88758e7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0563bc04b8214c79cf726057c88758e7">&#9670;&nbsp;</a></span>write_data_log()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">def data_collection.write_data_log </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>info</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>This function will write out given information to a log file for future access. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">info</td><td>Information to be written </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
