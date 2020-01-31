@@ -1,6 +1,6 @@
 ## @file data_collection.py
 # @brief Data Collection
-# @author Jacob Christensen
+# @author Jacob Christensen <christensenjj@msoe.edu>
 # @date 01/26/2020
 # @details This file will hold much of the functionality required for gathering and processing data from the peripherals of the microcontroller. This file will also pieces of the data collected back to the memory for future access.
 

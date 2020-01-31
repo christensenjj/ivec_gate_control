@@ -12,3 +12,7 @@ import gpio_ref
 def ncno_callback():
 
 
+## Callback for edge event on digital input 1
+def di1_callback():
+
+

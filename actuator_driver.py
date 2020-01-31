@@ -1,6 +1,6 @@
 ## @file actuator_driver.py
 # @brief Actuator Driver
-# @atuhor Jacob Christensen <christensenjj@msoe.edu>
+# @author Jacob Christensen <christensenjj@msoe.edu>
 # @date 01/22/2020
 # @details This file will contain the functions required to create the appropriate signal to drive the linear actuator through the motor controller.
 

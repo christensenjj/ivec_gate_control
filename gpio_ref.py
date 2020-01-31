@@ -28,3 +28,10 @@ def get_ip_address():
 def set_led_out(motion, position, error):
 
 
+## A function to get the status of the digital input(s) and indicate whether any of them remain active.
+#
+# @return A boolean value that indicates if a digital input is still active
+def get_di_states():
+
+
+
