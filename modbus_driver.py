@@ -42,7 +42,7 @@ def run_async_server():
 # @param ctxt Memory Context to read
 # @returns Values read from memory context
 def read_context(ctxt):
-
+	
 
 
 ## This function will write out to the Modbus Memory Context

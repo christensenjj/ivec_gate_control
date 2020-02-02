@@ -18,7 +18,7 @@ def set_postion(position):
 ## This function will set the duty cycle for the PWM signal for the motor controller
 #
 # @param duty_cycle Number (0-100) to indicate duty cycle for PWM signal
-def set_position(duty_cycle):
+def set_pwm(duty_cycle):
 
 
 ## This function will start the actuator moving forwards (according to motor controller)
