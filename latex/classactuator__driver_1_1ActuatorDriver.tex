@@ -14,15 +14,12 @@ def \mbox{\hyperlink{classactuator__driver_1_1ActuatorDriver_af4da56b817bf85e843
 \begin{DoxyCompactList}\small\item\em This function will move the actuator to the set position. \end{DoxyCompactList}\item 
 def \mbox{\hyperlink{classactuator__driver_1_1ActuatorDriver_a47be4df9b1a70e126124478977e613b5}{set\+\_\+pwm}} (self, duty\+\_\+cycle)
 \begin{DoxyCompactList}\small\item\em This function will set the duty cycle for the P\+WM signal for the motor controller. \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{classactuator__driver_1_1ActuatorDriver_a4205afe83bf73ada6a25ca88b8728410}\label{classactuator__driver_1_1ActuatorDriver_a4205afe83bf73ada6a25ca88b8728410}} 
 def \mbox{\hyperlink{classactuator__driver_1_1ActuatorDriver_a4205afe83bf73ada6a25ca88b8728410}{start\+\_\+fwd}} (self)
-\begin{DoxyCompactList}\small\item\em This function will start the actuator moving forwards (according to motor controller) \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{classactuator__driver_1_1ActuatorDriver_aafcccc4e0c3599cee8e5a51a581a5600}\label{classactuator__driver_1_1ActuatorDriver_aafcccc4e0c3599cee8e5a51a581a5600}} 
+\begin{DoxyCompactList}\small\item\em Start the actuator motion. \end{DoxyCompactList}\item 
 def \mbox{\hyperlink{classactuator__driver_1_1ActuatorDriver_aafcccc4e0c3599cee8e5a51a581a5600}{start\+\_\+bwd}} (self)
-\begin{DoxyCompactList}\small\item\em This function will start the actuator moving backwards (according to motor controller) \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{classactuator__driver_1_1ActuatorDriver_ab84d285236c48862ac399b72564616f1}\label{classactuator__driver_1_1ActuatorDriver_ab84d285236c48862ac399b72564616f1}} 
+\begin{DoxyCompactList}\small\item\em Start the actuator motion. \end{DoxyCompactList}\item 
 def \mbox{\hyperlink{classactuator__driver_1_1ActuatorDriver_ab84d285236c48862ac399b72564616f1}{stop\+\_\+actuator}} (self)
-\begin{DoxyCompactList}\small\item\em This function will disable the motor controller, stopping the actuator. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Stop the actuator motion. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Public Attributes}
 \begin{DoxyCompactItemize}
 \item 
@@ -42,14 +39,14 @@ def \mbox{\hyperlink{classactuator__driver_1_1ActuatorDriver_ab84d285236c48862ac
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\Hypertarget{classactuator__driver_1_1ActuatorDriver_a651a18d4b927abfad56249bc16612637}\label{classactuator__driver_1_1ActuatorDriver_a651a18d4b927abfad56249bc16612637}} 
-int {\bfseries max\+\_\+current} = 150
-\item 
+int \mbox{\hyperlink{classactuator__driver_1_1ActuatorDriver_a651a18d4b927abfad56249bc16612637}{max\+\_\+current}} = 150
+\begin{DoxyCompactList}\small\item\em Maximum current allowed before \char`\"{}\+Safe-\/\+Stop\char`\"{} is triggered. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classactuator__driver_1_1ActuatorDriver_ac9145feae83d35900eaa07461dfd8e3d}\label{classactuator__driver_1_1ActuatorDriver_ac9145feae83d35900eaa07461dfd8e3d}} 
-int {\bfseries pwm\+\_\+fwd} = 33
-\item 
+int \mbox{\hyperlink{classactuator__driver_1_1ActuatorDriver_ac9145feae83d35900eaa07461dfd8e3d}{pwm\+\_\+fwd}} = 33
+\begin{DoxyCompactList}\small\item\em Pin for output of pwm signal for moving forward. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classactuator__driver_1_1ActuatorDriver_af1967b0b02731b7892b3e882bf7aabcf}\label{classactuator__driver_1_1ActuatorDriver_af1967b0b02731b7892b3e882bf7aabcf}} 
-int {\bfseries pwm\+\_\+rev} = 32
-\end{DoxyCompactItemize}
+int \mbox{\hyperlink{classactuator__driver_1_1ActuatorDriver_af1967b0b02731b7892b3e882bf7aabcf}{pwm\+\_\+rev}} = 32
+\begin{DoxyCompactList}\small\item\em Pin for output of P\+WM signal for moving in reverse. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
@@ -106,7 +103,37 @@ This function will set the duty cycle for the P\+WM signal for the motor control
 {\em duty\+\_\+cycle} & Number (0-\/100) to indicate duty cycle for P\+WM signal \\
 \hline
 \end{DoxyParams}
+\mbox{\Hypertarget{classactuator__driver_1_1ActuatorDriver_aafcccc4e0c3599cee8e5a51a581a5600}\label{classactuator__driver_1_1ActuatorDriver_aafcccc4e0c3599cee8e5a51a581a5600}} 
+\index{actuator\_driver.ActuatorDriver@{actuator\_driver.ActuatorDriver}!start\_bwd@{start\_bwd}}
+\index{start\_bwd@{start\_bwd}!actuator\_driver.ActuatorDriver@{actuator\_driver.ActuatorDriver}}
+\doxysubsubsection{\texorpdfstring{start\_bwd()}{start\_bwd()}}
+{\footnotesize\ttfamily def actuator\+\_\+driver.\+Actuator\+Driver.\+start\+\_\+bwd (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
 
+
+
+Start the actuator motion. 
+
+Motion will be in the \char`\"{}opening\char`\"{} direction \mbox{\Hypertarget{classactuator__driver_1_1ActuatorDriver_a4205afe83bf73ada6a25ca88b8728410}\label{classactuator__driver_1_1ActuatorDriver_a4205afe83bf73ada6a25ca88b8728410}} 
+\index{actuator\_driver.ActuatorDriver@{actuator\_driver.ActuatorDriver}!start\_fwd@{start\_fwd}}
+\index{start\_fwd@{start\_fwd}!actuator\_driver.ActuatorDriver@{actuator\_driver.ActuatorDriver}}
+\doxysubsubsection{\texorpdfstring{start\_fwd()}{start\_fwd()}}
+{\footnotesize\ttfamily def actuator\+\_\+driver.\+Actuator\+Driver.\+start\+\_\+fwd (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+Start the actuator motion. 
+
+Motion will be in the \char`\"{}closing\char`\"{} direction \mbox{\Hypertarget{classactuator__driver_1_1ActuatorDriver_ab84d285236c48862ac399b72564616f1}\label{classactuator__driver_1_1ActuatorDriver_ab84d285236c48862ac399b72564616f1}} 
+\index{actuator\_driver.ActuatorDriver@{actuator\_driver.ActuatorDriver}!stop\_actuator@{stop\_actuator}}
+\index{stop\_actuator@{stop\_actuator}!actuator\_driver.ActuatorDriver@{actuator\_driver.ActuatorDriver}}
+\doxysubsubsection{\texorpdfstring{stop\_actuator()}{stop\_actuator()}}
+{\footnotesize\ttfamily def actuator\+\_\+driver.\+Actuator\+Driver.\+stop\+\_\+actuator (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+Stop the actuator motion. 
+
+Halt the generation of the P\+WM signals 
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 

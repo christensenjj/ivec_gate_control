@@ -11,13 +11,6 @@ import RPi.GPIO as GPIO
 ## @brief Class to manage signal generation for actuator motion
 class ActuatorDriver:
 
-	## @property Maximum current allowed before "Safe-Stop" is triggered
-	max_current = 150
-	## @property Pin for output of pwm signal for moving forward
-	pwm_fwd = 33
-	## @property Pin for output of PWM signal for moving in reverse
-	pwm_rev = 32
-
 	## This fucntion initializes the Actuator Driver object
 	#
 	# @param duty_cycle The starting duty_cycle of the PWM signal
@@ -30,6 +23,13 @@ class ActuatorDriver:
 		self.duty_cycle = duty_cycle
 		self.fwd_out = GPIO.PWM(self.pwm_fwd, 1000)
 		self.rev_out = GPIO.PWM(self.pwm_rev, 1000)
+
+	## Maximum current allowed before "Safe-Stop" is triggered
+	max_current = 150
+	## Pin for output of pwm signal for moving forward
+	pwm_fwd = 33
+	## Pin for output of PWM signal for moving in reverse
+	pwm_rev = 32
 
 	##This function will move the actuator to the set position
 	#
@@ -63,17 +63,23 @@ class ActuatorDriver:
 		self.fwd_out.ChangeDutyCycle(duty_cycle)
 		self.rev_out.ChangeDutyCycle(duty_cycle)
 
-	## This function will start the actuator moving forwards (according to motor controller)
+	## Start the actuator motion
+	#
+	# Motion will be in the "closing" direction
 	def start_fwd(self):
 		self.rev_out.stop()
 		self.fwd_out.start(self.duty_cycle)
 
-	## This function will start the actuator moving backwards (according to motor controller)
+	## Start the actuator motion
+	#
+	# Motion will be in the "opening" direction
 	def start_bwd(self):
 		self.fwd_out.stop()
 		self.rev_out.start(self.duty_cycle)
 
-	## This function will disable the motor controller, stopping the actuator
+	## Stop the actuator motion
+	#
+	# Halt the generation of the PWM signals
 	def stop_actuator(self):
 		self.fwd_out.stop()
 		self.rev_out.stop()
