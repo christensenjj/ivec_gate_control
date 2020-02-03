@@ -8,18 +8,20 @@ from gpio_ref import GPIORef
 import data_collection as DC
 import RPi.GPIO as GPIO
 
+## @brief Class to manage signal generation for actuator motion
 class ActuatorDriver:
 
-	# Maximum current allowed before "Safe-Stop" is triggered
+	## @property Maximum current allowed before "Safe-Stop" is triggered
 	max_current = 150
-	# Pin for output of pwm signal for moving forward
+	## @property Pin for output of pwm signal for moving forward
 	pwm_fwd = 33
-	# Pin for output of PWM signal for moving in reverse
+	## @property Pin for output of PWM signal for moving in reverse
 	pwm_rev = 32
 
 	## This fucntion initializes the Actuator Driver object
 	#
 	# @param duty_cycle The starting duty_cycle of the PWM signal
+	# @param gr Instance of GPIORef for LED functions
 	def __init__(self, duty_cycle, gr) :
 		self.gr = gr
 		GPIO.setmode(GPIO.BOARD)
