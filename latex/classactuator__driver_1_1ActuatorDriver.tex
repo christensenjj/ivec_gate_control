@@ -1,5 +1,10 @@
 \hypertarget{classactuator__driver_1_1ActuatorDriver}{}\doxysection{actuator\+\_\+driver.\+Actuator\+Driver Class Reference}
 \label{classactuator__driver_1_1ActuatorDriver}\index{actuator\_driver.ActuatorDriver@{actuator\_driver.ActuatorDriver}}
+
+
+Class to manage signal generation for actuator motion.  
+
+
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
@@ -47,6 +52,9 @@ int {\bfseries pwm\+\_\+rev} = 32
 \end{DoxyCompactItemize}
 
 
+\doxysubsection{Detailed Description}
+Class to manage signal generation for actuator motion. 
+
 \doxysubsection{Constructor \& Destructor Documentation}
 \mbox{\Hypertarget{classactuator__driver_1_1ActuatorDriver_a6e21c4d35539ad98e670a20dd639f957}\label{classactuator__driver_1_1ActuatorDriver_a6e21c4d35539ad98e670a20dd639f957}} 
 \index{actuator\_driver.ActuatorDriver@{actuator\_driver.ActuatorDriver}!\_\_init\_\_@{\_\_init\_\_}}
@@ -61,6 +69,8 @@ This fucntion initializes the Actuator Driver object.
 
 \begin{DoxyParams}{Parameters}
 {\em duty\+\_\+cycle} & The starting duty\+\_\+cycle of the P\+WM signal \\
+\hline
+{\em gr} & Instance of G\+P\+I\+O\+Ref for L\+ED functions \\
 \hline
 \end{DoxyParams}
 
