@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['adc_5fsetup_27',['adc_setup',['../data__collection_8py.html#a6706210a8833b99fb3fc51be7f7c69c6',1,'data_collection']]]
+  ['_5f_5finit_5f_5f_33',['__init__',['../classactuator__driver_1_1ActuatorDriver.html#afed360e1bb4bb08007f53b3294c6a2c9',1,'actuator_driver::ActuatorDriver']]]
 ];

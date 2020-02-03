@@ -2,63 +2,23 @@
 \label{actuator__driver_8py}\index{actuator\_driver.py@{actuator\_driver.py}}
 
 
-Actuator Driver @atuhor Jacob Christensen \href{mailto:christensenjj@msoe.edu}{\texttt{ christensenjj@msoe.\+edu}}  
+Actuator Driver.  
 
 
-\doxysubsection*{Functions}
+\doxysubsection*{Classes}
 \begin{DoxyCompactItemize}
 \item 
-def \mbox{\hyperlink{actuator__driver_8py_a925035532e28ff0db0a7712702e9a498}{actuator\+\_\+driver.\+set\+\_\+postion}} (position)
-\begin{DoxyCompactList}\small\item\em This function will move the actuator to the set position. \end{DoxyCompactList}\item 
-def \mbox{\hyperlink{actuator__driver_8py_a4185760ddafba063d35cf75de410e41d}{actuator\+\_\+driver.\+set\+\_\+position}} (duty\+\_\+cycle)
-\begin{DoxyCompactList}\small\item\em This function will set the duty cycle for the P\+WM signal for the motor controller. \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{actuator__driver_8py_a9a916825976cd019a33bd4c531e767d0}\label{actuator__driver_8py_a9a916825976cd019a33bd4c531e767d0}} 
-def \mbox{\hyperlink{actuator__driver_8py_a9a916825976cd019a33bd4c531e767d0}{actuator\+\_\+driver.\+start\+\_\+fwd}} ()
-\begin{DoxyCompactList}\small\item\em This function will start the actuator moving forwards (according to motor controller) \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{actuator__driver_8py_a9ff4d84129df359ec6723b1c0709ae8e}\label{actuator__driver_8py_a9ff4d84129df359ec6723b1c0709ae8e}} 
-def \mbox{\hyperlink{actuator__driver_8py_a9ff4d84129df359ec6723b1c0709ae8e}{actuator\+\_\+driver.\+start\+\_\+bwd}} ()
-\begin{DoxyCompactList}\small\item\em This function will start the actuator moving backwards (according to motor controller) \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{actuator__driver_8py_acd8c41a88f8e6337de3168d6d0192594}\label{actuator__driver_8py_acd8c41a88f8e6337de3168d6d0192594}} 
-def \mbox{\hyperlink{actuator__driver_8py_acd8c41a88f8e6337de3168d6d0192594}{actuator\+\_\+driver.\+stop\+\_\+actuator}} ()
-\begin{DoxyCompactList}\small\item\em This function will disable the motor controller, stopping the actuator. \end{DoxyCompactList}\end{DoxyCompactItemize}
+class \mbox{\hyperlink{classactuator__driver_1_1ActuatorDriver}{actuator\+\_\+driver.\+Actuator\+Driver}}
+\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
-Actuator Driver @atuhor Jacob Christensen \href{mailto:christensenjj@msoe.edu}{\texttt{ christensenjj@msoe.\+edu}} 
+Actuator Driver. 
 
+\begin{DoxyAuthor}{Author}
+Jacob Christensen \href{mailto:christensenjj@msoe.edu}{\texttt{ christensenjj@msoe.\+edu}} 
+\end{DoxyAuthor}
 \begin{DoxyDate}{Date}
 01/22/2020
 \end{DoxyDate}
 This file will contain the functions required to create the appropriate signal to drive the linear actuator through the motor controller. 
-
-\doxysubsection{Function Documentation}
-\mbox{\Hypertarget{actuator__driver_8py_a4185760ddafba063d35cf75de410e41d}\label{actuator__driver_8py_a4185760ddafba063d35cf75de410e41d}} 
-\index{actuator\_driver.py@{actuator\_driver.py}!set\_position@{set\_position}}
-\index{set\_position@{set\_position}!actuator\_driver.py@{actuator\_driver.py}}
-\doxysubsubsection{\texorpdfstring{set\_position()}{set\_position()}}
-{\footnotesize\ttfamily def actuator\+\_\+driver.\+set\+\_\+position (\begin{DoxyParamCaption}\item[{}]{duty\+\_\+cycle }\end{DoxyParamCaption})}
-
-
-
-This function will set the duty cycle for the P\+WM signal for the motor controller. 
-
-
-\begin{DoxyParams}{Parameters}
-{\em duty\+\_\+cycle} & Number (0-\/100) to indicate duty cycle for P\+WM signal \\
-\hline
-\end{DoxyParams}
-\mbox{\Hypertarget{actuator__driver_8py_a925035532e28ff0db0a7712702e9a498}\label{actuator__driver_8py_a925035532e28ff0db0a7712702e9a498}} 
-\index{actuator\_driver.py@{actuator\_driver.py}!set\_postion@{set\_postion}}
-\index{set\_postion@{set\_postion}!actuator\_driver.py@{actuator\_driver.py}}
-\doxysubsubsection{\texorpdfstring{set\_postion()}{set\_postion()}}
-{\footnotesize\ttfamily def actuator\+\_\+driver.\+set\+\_\+postion (\begin{DoxyParamCaption}\item[{}]{position }\end{DoxyParamCaption})}
-
-
-
-This function will move the actuator to the set position. 
-
-
-\begin{DoxyParams}{Parameters}
-{\em position} & Number (0-\/100) to indicate percentage open \\
-\hline
-\end{DoxyParams}

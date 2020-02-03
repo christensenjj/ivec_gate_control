@@ -1,0 +1,100 @@
+\hypertarget{classactuator__driver_1_1ActuatorDriver}{}\doxysection{actuator\+\_\+driver.\+Actuator\+Driver Class Reference}
+\label{classactuator__driver_1_1ActuatorDriver}\index{actuator\_driver.ActuatorDriver@{actuator\_driver.ActuatorDriver}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{classactuator__driver_1_1ActuatorDriver_afed360e1bb4bb08007f53b3294c6a2c9}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self, duty\+\_\+cycle)
+\begin{DoxyCompactList}\small\item\em This fucntion initializes the Actuator Driver object. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{classactuator__driver_1_1ActuatorDriver_af4da56b817bf85e84382852e280dffcb}{set\+\_\+position}} (self, position)
+\begin{DoxyCompactList}\small\item\em This function will move the actuator to the set position. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{classactuator__driver_1_1ActuatorDriver_a47be4df9b1a70e126124478977e613b5}{set\+\_\+pwm}} (self, duty\+\_\+cycle)
+\begin{DoxyCompactList}\small\item\em This function will set the duty cycle for the P\+WM signal for the motor controller. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classactuator__driver_1_1ActuatorDriver_a4205afe83bf73ada6a25ca88b8728410}\label{classactuator__driver_1_1ActuatorDriver_a4205afe83bf73ada6a25ca88b8728410}} 
+def \mbox{\hyperlink{classactuator__driver_1_1ActuatorDriver_a4205afe83bf73ada6a25ca88b8728410}{start\+\_\+fwd}} (self)
+\begin{DoxyCompactList}\small\item\em This function will start the actuator moving forwards (according to motor controller) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classactuator__driver_1_1ActuatorDriver_aafcccc4e0c3599cee8e5a51a581a5600}\label{classactuator__driver_1_1ActuatorDriver_aafcccc4e0c3599cee8e5a51a581a5600}} 
+def \mbox{\hyperlink{classactuator__driver_1_1ActuatorDriver_aafcccc4e0c3599cee8e5a51a581a5600}{start\+\_\+bwd}} (self)
+\begin{DoxyCompactList}\small\item\em This function will start the actuator moving backwards (according to motor controller) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classactuator__driver_1_1ActuatorDriver_ab84d285236c48862ac399b72564616f1}\label{classactuator__driver_1_1ActuatorDriver_ab84d285236c48862ac399b72564616f1}} 
+def \mbox{\hyperlink{classactuator__driver_1_1ActuatorDriver_ab84d285236c48862ac399b72564616f1}{stop\+\_\+actuator}} (self)
+\begin{DoxyCompactList}\small\item\em This function will disable the motor controller, stopping the actuator. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classactuator__driver_1_1ActuatorDriver_a6cab15d7c3b27e8009df128a21d1d649}\label{classactuator__driver_1_1ActuatorDriver_a6cab15d7c3b27e8009df128a21d1d649}} 
+{\bfseries duty\+\_\+cycle}
+\item 
+\mbox{\Hypertarget{classactuator__driver_1_1ActuatorDriver_ab3d8941e4d5cb0c8665152d45f0fbf40}\label{classactuator__driver_1_1ActuatorDriver_ab3d8941e4d5cb0c8665152d45f0fbf40}} 
+{\bfseries fwd\+\_\+out}
+\item 
+\mbox{\Hypertarget{classactuator__driver_1_1ActuatorDriver_a36552d2238aa34caf4faef0429780015}\label{classactuator__driver_1_1ActuatorDriver_a36552d2238aa34caf4faef0429780015}} 
+{\bfseries rev\+\_\+out}
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classactuator__driver_1_1ActuatorDriver_a651a18d4b927abfad56249bc16612637}\label{classactuator__driver_1_1ActuatorDriver_a651a18d4b927abfad56249bc16612637}} 
+int {\bfseries max\+\_\+current} = 150
+\item 
+\mbox{\Hypertarget{classactuator__driver_1_1ActuatorDriver_ac9145feae83d35900eaa07461dfd8e3d}\label{classactuator__driver_1_1ActuatorDriver_ac9145feae83d35900eaa07461dfd8e3d}} 
+int {\bfseries pwm\+\_\+fwd} = 33
+\item 
+\mbox{\Hypertarget{classactuator__driver_1_1ActuatorDriver_af1967b0b02731b7892b3e882bf7aabcf}\label{classactuator__driver_1_1ActuatorDriver_af1967b0b02731b7892b3e882bf7aabcf}} 
+int {\bfseries pwm\+\_\+rev} = 32
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classactuator__driver_1_1ActuatorDriver_afed360e1bb4bb08007f53b3294c6a2c9}\label{classactuator__driver_1_1ActuatorDriver_afed360e1bb4bb08007f53b3294c6a2c9}} 
+\index{actuator\_driver.ActuatorDriver@{actuator\_driver.ActuatorDriver}!\_\_init\_\_@{\_\_init\_\_}}
+\index{\_\_init\_\_@{\_\_init\_\_}!actuator\_driver.ActuatorDriver@{actuator\_driver.ActuatorDriver}}
+\doxysubsubsection{\texorpdfstring{\_\_init\_\_()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily def actuator\+\_\+driver.\+Actuator\+Driver.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{duty\+\_\+cycle }\end{DoxyParamCaption})}
+
+
+
+This fucntion initializes the Actuator Driver object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em duty\+\_\+cycle} & The starting duty\+\_\+cycle of the P\+WM signal \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classactuator__driver_1_1ActuatorDriver_af4da56b817bf85e84382852e280dffcb}\label{classactuator__driver_1_1ActuatorDriver_af4da56b817bf85e84382852e280dffcb}} 
+\index{actuator\_driver.ActuatorDriver@{actuator\_driver.ActuatorDriver}!set\_position@{set\_position}}
+\index{set\_position@{set\_position}!actuator\_driver.ActuatorDriver@{actuator\_driver.ActuatorDriver}}
+\doxysubsubsection{\texorpdfstring{set\_position()}{set\_position()}}
+{\footnotesize\ttfamily def actuator\+\_\+driver.\+Actuator\+Driver.\+set\+\_\+position (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{position }\end{DoxyParamCaption})}
+
+
+
+This function will move the actuator to the set position. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em position} & Number (0-\/100) to indicate percentage open \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classactuator__driver_1_1ActuatorDriver_a47be4df9b1a70e126124478977e613b5}\label{classactuator__driver_1_1ActuatorDriver_a47be4df9b1a70e126124478977e613b5}} 
+\index{actuator\_driver.ActuatorDriver@{actuator\_driver.ActuatorDriver}!set\_pwm@{set\_pwm}}
+\index{set\_pwm@{set\_pwm}!actuator\_driver.ActuatorDriver@{actuator\_driver.ActuatorDriver}}
+\doxysubsubsection{\texorpdfstring{set\_pwm()}{set\_pwm()}}
+{\footnotesize\ttfamily def actuator\+\_\+driver.\+Actuator\+Driver.\+set\+\_\+pwm (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{duty\+\_\+cycle }\end{DoxyParamCaption})}
+
+
+
+This function will set the duty cycle for the P\+WM signal for the motor controller. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em duty\+\_\+cycle} & Number (0-\/100) to indicate duty cycle for P\+WM signal \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{actuator__driver_8py}{actuator\+\_\+driver.\+py}}\end{DoxyCompactItemize}
