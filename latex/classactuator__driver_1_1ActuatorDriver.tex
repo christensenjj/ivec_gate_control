@@ -8,11 +8,11 @@ Class to manage signal generation for actuator motion.
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-def \mbox{\hyperlink{classactuator__driver_1_1ActuatorDriver_a6e21c4d35539ad98e670a20dd639f957}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self, duty\+\_\+cycle, gr)
+def \mbox{\hyperlink{classactuator__driver_1_1ActuatorDriver_a6e21c4d35539ad98e670a20dd639f957}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self, \mbox{\hyperlink{classactuator__driver_1_1ActuatorDriver_a6cab15d7c3b27e8009df128a21d1d649}{duty\+\_\+cycle}}, \mbox{\hyperlink{classactuator__driver_1_1ActuatorDriver_a1a5cda3700880889819e96bb9b46fad1}{gr}})
 \begin{DoxyCompactList}\small\item\em This fucntion initializes the Actuator Driver object. \end{DoxyCompactList}\item 
 def \mbox{\hyperlink{classactuator__driver_1_1ActuatorDriver_af4da56b817bf85e84382852e280dffcb}{set\+\_\+position}} (self, position)
 \begin{DoxyCompactList}\small\item\em This function will move the actuator to the set position. \end{DoxyCompactList}\item 
-def \mbox{\hyperlink{classactuator__driver_1_1ActuatorDriver_a47be4df9b1a70e126124478977e613b5}{set\+\_\+pwm}} (self, duty\+\_\+cycle)
+def \mbox{\hyperlink{classactuator__driver_1_1ActuatorDriver_a47be4df9b1a70e126124478977e613b5}{set\+\_\+pwm}} (self, \mbox{\hyperlink{classactuator__driver_1_1ActuatorDriver_a6cab15d7c3b27e8009df128a21d1d649}{duty\+\_\+cycle}})
 \begin{DoxyCompactList}\small\item\em This function will set the duty cycle for the P\+WM signal for the motor controller. \end{DoxyCompactList}\item 
 def \mbox{\hyperlink{classactuator__driver_1_1ActuatorDriver_a4205afe83bf73ada6a25ca88b8728410}{start\+\_\+fwd}} (self)
 \begin{DoxyCompactList}\small\item\em Start the actuator motion. \end{DoxyCompactList}\item 
@@ -24,17 +24,17 @@ def \mbox{\hyperlink{classactuator__driver_1_1ActuatorDriver_ab84d285236c48862ac
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\Hypertarget{classactuator__driver_1_1ActuatorDriver_a1a5cda3700880889819e96bb9b46fad1}\label{classactuator__driver_1_1ActuatorDriver_a1a5cda3700880889819e96bb9b46fad1}} 
-{\bfseries gr}
-\item 
+\mbox{\hyperlink{classactuator__driver_1_1ActuatorDriver_a1a5cda3700880889819e96bb9b46fad1}{gr}}
+\begin{DoxyCompactList}\small\item\em Instance of G\+P\+I\+O\+Ref for access to G\+P\+IO functions. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classactuator__driver_1_1ActuatorDriver_a6cab15d7c3b27e8009df128a21d1d649}\label{classactuator__driver_1_1ActuatorDriver_a6cab15d7c3b27e8009df128a21d1d649}} 
-{\bfseries duty\+\_\+cycle}
-\item 
+\mbox{\hyperlink{classactuator__driver_1_1ActuatorDriver_a6cab15d7c3b27e8009df128a21d1d649}{duty\+\_\+cycle}}
+\begin{DoxyCompactList}\small\item\em The duty cycle of the P\+WM signal driving the actuator. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classactuator__driver_1_1ActuatorDriver_ab3d8941e4d5cb0c8665152d45f0fbf40}\label{classactuator__driver_1_1ActuatorDriver_ab3d8941e4d5cb0c8665152d45f0fbf40}} 
-{\bfseries fwd\+\_\+out}
-\item 
+\mbox{\hyperlink{classactuator__driver_1_1ActuatorDriver_ab3d8941e4d5cb0c8665152d45f0fbf40}{fwd\+\_\+out}}
+\begin{DoxyCompactList}\small\item\em P\+WM instance for forward motion. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classactuator__driver_1_1ActuatorDriver_a36552d2238aa34caf4faef0429780015}\label{classactuator__driver_1_1ActuatorDriver_a36552d2238aa34caf4faef0429780015}} 
-{\bfseries rev\+\_\+out}
-\end{DoxyCompactItemize}
+\mbox{\hyperlink{classactuator__driver_1_1ActuatorDriver_a36552d2238aa34caf4faef0429780015}{rev\+\_\+out}}
+\begin{DoxyCompactList}\small\item\em P\+WM instance for reverse motion. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Static Public Attributes}
 \begin{DoxyCompactItemize}
 \item 
@@ -67,7 +67,7 @@ This fucntion initializes the Actuator Driver object.
 \begin{DoxyParams}{Parameters}
 {\em duty\+\_\+cycle} & The starting duty\+\_\+cycle of the P\+WM signal \\
 \hline
-{\em gr} & Instance of G\+P\+I\+O\+Ref for L\+ED functions \\
+{\em gr} & Instance of G\+P\+I\+O\+Ref for access to G\+P\+IO functions \\
 \hline
 \end{DoxyParams}
 

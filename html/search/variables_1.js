@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['pwm_5ffwd_59',['pwm_fwd',['../classactuator__driver_1_1ActuatorDriver.html#ac9145feae83d35900eaa07461dfd8e3d',1,'actuator_driver::ActuatorDriver']]],
-  ['pwm_5frev_60',['pwm_rev',['../classactuator__driver_1_1ActuatorDriver.html#af1967b0b02731b7892b3e882bf7aabcf',1,'actuator_driver::ActuatorDriver']]]
+  ['fwd_5fout_63',['fwd_out',['../classactuator__driver_1_1ActuatorDriver.html#ab3d8941e4d5cb0c8665152d45f0fbf40',1,'actuator_driver::ActuatorDriver']]]
 ];

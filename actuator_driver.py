@@ -14,14 +14,18 @@ class ActuatorDriver:
 	## This fucntion initializes the Actuator Driver object
 	#
 	# @param duty_cycle The starting duty_cycle of the PWM signal
-	# @param gr Instance of GPIORef for LED functions
+	# @param gr Instance of GPIORef for access to GPIO functions
 	def __init__(self, duty_cycle, gr) :
+		## Instance of GPIORef for access to GPIO functions
 		self.gr = gr
 		GPIO.setmode(GPIO.BOARD)
 		GPIO.setup(self.pwm_fwd, GPIO.OUT)
 		GPIO.setup(self.pwm_rev, GPIO.OUT)
+		## The duty cycle of the PWM signal driving the actuator
 		self.duty_cycle = duty_cycle
+		## PWM instance for forward motion
 		self.fwd_out = GPIO.PWM(self.pwm_fwd, 1000)
+		## PWM instance for reverse motion
 		self.rev_out = GPIO.PWM(self.pwm_rev, 1000)
 
 	## Maximum current allowed before "Safe-Stop" is triggered
