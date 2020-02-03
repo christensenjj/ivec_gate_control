@@ -1,0 +1,67 @@
+\hypertarget{classgpio__ref_1_1GPIORef}{}\doxysection{gpio\+\_\+ref.\+G\+P\+I\+O\+Ref Class Reference}
+\label{classgpio__ref_1_1GPIORef}\index{gpio\_ref.GPIORef@{gpio\_ref.GPIORef}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classgpio__ref_1_1GPIORef_a5952422206eb3e8deb68162c550f8d98}\label{classgpio__ref_1_1GPIORef_a5952422206eb3e8deb68162c550f8d98}} 
+def \mbox{\hyperlink{classgpio__ref_1_1GPIORef_a5952422206eb3e8deb68162c550f8d98}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self)
+\begin{DoxyCompactList}\small\item\em Initialization function for the G\+P\+IO Ref Class. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classgpio__ref_1_1GPIORef_a471151428eb275434407726ce372f93b}\label{classgpio__ref_1_1GPIORef_a471151428eb275434407726ce372f93b}} 
+def \mbox{\hyperlink{classgpio__ref_1_1GPIORef_a471151428eb275434407726ce372f93b}{setup\+\_\+gpio}} (self)
+\begin{DoxyCompactList}\small\item\em A function for setting all of the G\+P\+IO pins to their necessary states. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classgpio__ref_1_1GPIORef_a5cccb72df8fa03759703f6376cbd857a}\label{classgpio__ref_1_1GPIORef_a5cccb72df8fa03759703f6376cbd857a}} 
+def \mbox{\hyperlink{classgpio__ref_1_1GPIORef_a5cccb72df8fa03759703f6376cbd857a}{get\+\_\+ip\+\_\+address}} (self)
+\begin{DoxyCompactList}\small\item\em A function for retrieving the current IP address, read from the external D\+IP switch. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{classgpio__ref_1_1GPIORef_a14c8a6e03702b1224426657ca3ba6f6b}{set\+\_\+led\+\_\+out}} (self, motion, position, error)
+\begin{DoxyCompactList}\small\item\em A function for setting the status of the L\+E\+Ds. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{classgpio__ref_1_1GPIORef_a4b174ce41d9fe1f5eefb9777cb614385}{get\+\_\+di\+\_\+states}} (self)
+\begin{DoxyCompactList}\small\item\em A function to get the status of the digital input(s) and indicate whether any of them remain active. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classgpio__ref_1_1GPIORef_a32d5fa279cbbcd927f0937a97f83bd42}\label{classgpio__ref_1_1GPIORef_a32d5fa279cbbcd927f0937a97f83bd42}} 
+{\bfseries ip\+\_\+address}
+\item 
+\mbox{\Hypertarget{classgpio__ref_1_1GPIORef_a31eac87c6aad42aad6496e24a36e9fa2}\label{classgpio__ref_1_1GPIORef_a31eac87c6aad42aad6496e24a36e9fa2}} 
+{\bfseries normal\+\_\+open}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classgpio__ref_1_1GPIORef_a4b174ce41d9fe1f5eefb9777cb614385}\label{classgpio__ref_1_1GPIORef_a4b174ce41d9fe1f5eefb9777cb614385}} 
+\index{gpio\_ref.GPIORef@{gpio\_ref.GPIORef}!get\_di\_states@{get\_di\_states}}
+\index{get\_di\_states@{get\_di\_states}!gpio\_ref.GPIORef@{gpio\_ref.GPIORef}}
+\doxysubsubsection{\texorpdfstring{get\_di\_states()}{get\_di\_states()}}
+{\footnotesize\ttfamily def gpio\+\_\+ref.\+G\+P\+I\+O\+Ref.\+get\+\_\+di\+\_\+states (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+A function to get the status of the digital input(s) and indicate whether any of them remain active. 
+
+\begin{DoxyReturn}{Returns}
+A boolean value that indicates if a digital input is still active 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classgpio__ref_1_1GPIORef_a14c8a6e03702b1224426657ca3ba6f6b}\label{classgpio__ref_1_1GPIORef_a14c8a6e03702b1224426657ca3ba6f6b}} 
+\index{gpio\_ref.GPIORef@{gpio\_ref.GPIORef}!set\_led\_out@{set\_led\_out}}
+\index{set\_led\_out@{set\_led\_out}!gpio\_ref.GPIORef@{gpio\_ref.GPIORef}}
+\doxysubsubsection{\texorpdfstring{set\_led\_out()}{set\_led\_out()}}
+{\footnotesize\ttfamily def gpio\+\_\+ref.\+G\+P\+I\+O\+Ref.\+set\+\_\+led\+\_\+out (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{motion,  }\item[{}]{position,  }\item[{}]{error }\end{DoxyParamCaption})}
+
+
+
+A function for setting the status of the L\+E\+Ds. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em motion} & A boolean value that indicates whether or not the gate is in motion \\
+\hline
+{\em position} & An integer in the range 0-\/100 indicating the position of the gate. \\
+\hline
+{\em error} & A boolean value that indicates if an error has occured or if service is needed \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{gpio__ref_8py}{gpio\+\_\+ref.\+py}}\end{DoxyCompactItemize}

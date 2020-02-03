@@ -4,6 +4,7 @@
 # @date 01/22/2020
 # @details This file will contain the functions required to create the appropriate signal to drive the linear actuator through the motor controller.
 
+from gpio_ref import GPIORef
 import data_collection as DC
 import RPi.GPIO as GPIO
 
@@ -19,10 +20,14 @@ class ActuatorDriver:
 	## This fucntion initializes the Actuator Driver object
 	#
 	# @param duty_cycle The starting duty_cycle of the PWM signal
-	def __init__(self, duty_cycle) :
+	def __init__(self, duty_cycle, gr) :
+		self.gr = gr
+		GPIO.setmode(GPIO.BOARD)
+		GPIO.setup(self.pwm_fwd, GPIO.OUT)
+		GPIO.setup(self.pwm_rev, GPIO.OUT)
 		self.duty_cycle = duty_cycle
-		self.fwd_out = GPIO.PWM(pwm_fwd, 1000)
-		self.rev_out = GPIO.PWM(pwm_rev, 1000)
+		self.fwd_out = GPIO.PWM(self.pwm_fwd, 1000)
+		self.rev_out = GPIO.PWM(self.pwm_rev, 1000)
 
 	##This function will move the actuator to the set position
 	#
@@ -36,14 +41,17 @@ class ActuatorDriver:
 			while (position > current_pos) and (self.max_current > current_draw) :
 				current_pos = DC.get_position()
 				current_draw = DC.get_current()
+				self.gr.set_led_out(True, current_pos, False)
 		# If the gate is closed, start the actuator moving in reverse to open
 		elif(position < current_pos):
 			self.start_bwd()
 			while(position < current_pos) and (self.max_current > current_draw) :
 				current_pos = DC.get_position()
 				current_draw = DC.get_current()
+				self.gr.set_led_out(True, current_pos, False)
 		# Stop the actuator if the position is reached or the current draw is too high
 		self.stop_actuator()
+		self.gr.set_led_out(False, current_pos, None)
 
 	## This function will set the duty cycle for the PWM signal for the motor controller
 	#

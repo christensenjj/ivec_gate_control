@@ -78,9 +78,9 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:afed360e1bb4bb08007f53b3294c6a2c9"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classactuator__driver_1_1ActuatorDriver.html#afed360e1bb4bb08007f53b3294c6a2c9">__init__</a> (self, duty_cycle)</td></tr>
-<tr class="memdesc:afed360e1bb4bb08007f53b3294c6a2c9"><td class="mdescLeft">&#160;</td><td class="mdescRight">This fucntion initializes the Actuator Driver object.  <a href="classactuator__driver_1_1ActuatorDriver.html#afed360e1bb4bb08007f53b3294c6a2c9">More...</a><br /></td></tr>
-<tr class="separator:afed360e1bb4bb08007f53b3294c6a2c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6e21c4d35539ad98e670a20dd639f957"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classactuator__driver_1_1ActuatorDriver.html#a6e21c4d35539ad98e670a20dd639f957">__init__</a> (self, duty_cycle, gr)</td></tr>
+<tr class="memdesc:a6e21c4d35539ad98e670a20dd639f957"><td class="mdescLeft">&#160;</td><td class="mdescRight">This fucntion initializes the Actuator Driver object.  <a href="classactuator__driver_1_1ActuatorDriver.html#a6e21c4d35539ad98e670a20dd639f957">More...</a><br /></td></tr>
+<tr class="separator:a6e21c4d35539ad98e670a20dd639f957"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af4da56b817bf85e84382852e280dffcb"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classactuator__driver_1_1ActuatorDriver.html#af4da56b817bf85e84382852e280dffcb">set_position</a> (self, position)</td></tr>
 <tr class="memdesc:af4da56b817bf85e84382852e280dffcb"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function will move the actuator to the set position.  <a href="classactuator__driver_1_1ActuatorDriver.html#af4da56b817bf85e84382852e280dffcb">More...</a><br /></td></tr>
 <tr class="separator:af4da56b817bf85e84382852e280dffcb"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -102,6 +102,9 @@ def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
+<tr class="memitem:a1a5cda3700880889819e96bb9b46fad1"><td class="memItemLeft" align="right" valign="top"><a id="a1a5cda3700880889819e96bb9b46fad1"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>gr</b></td></tr>
+<tr class="separator:a1a5cda3700880889819e96bb9b46fad1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6cab15d7c3b27e8009df128a21d1d649"><td class="memItemLeft" align="right" valign="top"><a id="a6cab15d7c3b27e8009df128a21d1d649"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>duty_cycle</b></td></tr>
 <tr class="separator:a6cab15d7c3b27e8009df128a21d1d649"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -125,8 +128,8 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>pwm_rev</b> = 32</td><
 <tr class="separator:af1967b0b02731b7892b3e882bf7aabcf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="afed360e1bb4bb08007f53b3294c6a2c9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#afed360e1bb4bb08007f53b3294c6a2c9">&#9670;&nbsp;</a></span>__init__()</h2>
+<a id="a6e21c4d35539ad98e670a20dd639f957"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6e21c4d35539ad98e670a20dd639f957">&#9670;&nbsp;</a></span>__init__()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -141,7 +144,13 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>pwm_rev</b> = 32</td><
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>duty_cycle</em>&#160;</td>
+          <td class="paramname"><em>duty_cycle</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>gr</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
