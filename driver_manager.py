@@ -7,6 +7,7 @@
 
 from actuator_driver import ActuatorDriver
 from gpio_ref import GPIORef
+from data_collection import DataCollection
 
 ##Callback for edge event on Normally Open/Closed Switch"
 def ncno_callback():
@@ -20,14 +21,17 @@ def di_callback():
 ## Main execution for control system software
 def main():
 	gpio.setup_gpio()
+	dc.adc_setup()
 	actuator.set_pwm(70)
 	actuator.set_position(40)
 
 if __name__ == "__main__":
 	# Instantiate the GPIO reference object
 	gpio = GPIORef()
+	# Instantiate the Data Collection object
+	dc = DataCollection()
 	# Instantiate ActuatorDriver with 60% duty cycle
-	actuator = ActuatorDriver(60, gpio)
+	actuator = ActuatorDriver(60, gpio, dc)
 	# Run top level code
 	main()
 

@@ -5,7 +5,7 @@
 # @details This file will contain the functions required to create the appropriate signal to drive the linear actuator through the motor controller.
 
 from gpio_ref import GPIORef
-import data_collection as DC
+from data_collection import DataCollection
 import RPi.GPIO as GPIO
 
 ## @brief Class to manage signal generation for actuator motion
@@ -15,12 +15,15 @@ class ActuatorDriver:
 	#
 	# @param duty_cycle The starting duty_cycle of the PWM signal
 	# @param gr Instance of GPIORef for access to GPIO functions
-	def __init__(self, duty_cycle, gr) :
+	# @param dc Instance of DataCollection for access to sensor data
+	def __init__(self, duty_cycle, gr, dc) :
 		## Instance of GPIORef for access to GPIO functions
 		self.gr = gr
 		GPIO.setmode(GPIO.BOARD)
 		GPIO.setup(self.pwm_fwd, GPIO.OUT)
 		GPIO.setup(self.pwm_rev, GPIO.OUT)
+		## Instance of DataCollection for access to sensor data
+		self.dc = dc
 		## The duty cycle of the PWM signal driving the actuator
 		self.duty_cycle = duty_cycle
 		## PWM instance for forward motion
@@ -39,25 +42,27 @@ class ActuatorDriver:
 	#
 	# @param position Number (0-100) to indicate percentage open
 	def set_position(self, position) :
-		current_pos = DC.get_position()
-		current_draw = DC.get_current()
+		current_pos = self.dc.get_position()
+		current_draw = self.dc.get_current()
 		# If the gate is open, start the actuator moving forward to close
 		if(position > current_pos):
 			self.start_fwd()
 			while (position > current_pos) and (self.max_current > current_draw) :
-				current_pos = DC.get_position()
-				current_draw = DC.get_current()
+				current_pos = self.dc.get_position()
+				current_draw = self.dc.get_current()
 				self.gr.set_led_out(True, current_pos, False)
 		# If the gate is closed, start the actuator moving in reverse to open
 		elif(position < current_pos):
 			self.start_bwd()
 			while(position < current_pos) and (self.max_current > current_draw) :
-				current_pos = DC.get_position()
-				current_draw = DC.get_current()
+				current_pos = self.dc.get_position()
+				current_draw = self.dc.get_current()
 				self.gr.set_led_out(True, current_pos, False)
 		# Stop the actuator if the position is reached or the current draw is too high
 		self.stop_actuator()
-		self.gr.set_led_out(False, current_pos, None)
+		event = "Safe-Stop - Current Overdraw Detected" if (current_draw > self.max_current) else "Position Reached"
+		self.dc.write_data_log("Event: %s | Position: %d | Current Draw: %d " % (event, current_pos, current_draw))
+		self.gr.set_led_out(False, current_pos, (current_draw > self.max_current))
 
 	## This function will set the duty cycle for the PWM signal for the motor controller
 	#
