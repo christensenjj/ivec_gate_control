@@ -8,6 +8,9 @@
 from actuator_driver import ActuatorDriver
 from gpio_ref import GPIORef
 from data_collection import DataCollection
+from twisted.internet.task import LoopingCall
+from modbus_driver import ModbusDriver
+
 
 ##Callback for edge event on Normally Open/Closed Switch"
 def ncno_callback():
@@ -22,14 +25,19 @@ def di_callback():
 def main():
 	gpio.setup_gpio()
 	dc.adc_setup()
+	loop = LoopingCall(modbus.read_context, ctxt=(modbus.context,))
 	actuator.set_pwm(70)
 	actuator.set_position(40)
+	loop.start(2)
+	modbus.run_async_server()
 
 if __name__ == "__main__":
 	# Instantiate the GPIO reference object
 	gpio = GPIORef()
 	# Instantiate the Data Collection object
 	dc = DataCollection()
+	# Instantiate the Modbus Driver Object
+	modbus = ModbusDriver()
 	# Instantiate ActuatorDriver with 60% duty cycle
 	actuator = ActuatorDriver(60, gpio, dc)
 	# Run top level code

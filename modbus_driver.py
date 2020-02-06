@@ -13,43 +13,48 @@ from pymodbus.transaction import (ModbusRtuFramer,
                                   ModbusAsciiFramer,
                                   ModbusBinaryFramer)
 
-## Function to configure and start the Modbus Server.
-def run_async_server():
+class ModbusDriver :
 
-    store = ModbusSlaveContext(
-        di=ModbusSequentialDataBlock(0, [17]*100),
-        co=ModbusSequentialDataBlock(0, [17]*100),
-        hr=ModbusSequentialDataBlock(0, [17]*100),
-        ir=ModbusSequentialDataBlock(0, [17]*100))
-    context = ModbusServerContext(slaves=store, single=True)
+	## Initializes the ModbusDriver Class
+	def __init__(self):
+	    store = ModbusSlaveContext(
+	        di=ModbusSequentialDataBlock(0, [17]*100),
+	        co=ModbusSequentialDataBlock(0, [17]*100),
+	        hr=ModbusSequentialDataBlock(0, [17]*100),
+	        ir=ModbusSequentialDataBlock(0, [17]*100))
+	    self.context = ModbusServerContext(slaves=store, single=True)
 
-    identity = ModbusDeviceIdentification()
-    identity.VendorName = 'Pymodbus'
-    identity.ProductCode = 'PM'
-    identity.VendorUrl = 'http://github.com/bashwork/pymodbus/'
-    identity.ProductName = 'Pymodbus Server'
-    identity.ModelName = 'Pymodbus Server'
-    identity.MajorMinorRevision = '2.3.0'
+	## Function to configure and start the Modbus Server.
+	def run_async_server(self):
+	    identity = ModbusDeviceIdentification()
+	    identity.VendorName = 'Pymodbus'
+	    identity.ProductCode = 'PM'
+	    identity.VendorUrl = 'http://github.com/bashwork/pymodbus/'
+	    identity.ProductName = 'Pymodbus Server'
+	    identity.ModelName = 'Pymodbus Server'
+	    identity.MajorMinorRevision = '2.3.0'
+	    ## Start TCP Server
+	    StartTcpServer(self.context, identity=identity, address=("localhost", 5020))
 
-    ## Start TCP Server
-    StartTcpServer(context, identity=identity, address=("localhost", 5020),
-                   custom_functions=[CustomModbusRequest])
+	##This function will read the Modbus Memory Context to check for updates
+	#
+	# @param ctxt Memory Context to read
+	# @returns Values read from memory context
+	def read_context(self, ctxt):
+		context  = ctxt[0]
+		register = 3
+		slave_id = 0x00
+		address  = 0x00
+		value = context[slave_id].getValues(register,address)[0]
+		print(value)
 
 
-
-##This function will read the Modbus Memory Context to check for updates
-#
-# @param ctxt Memory Context to read
-# @returns Values read from memory context
-def read_context(ctxt):
-	
-
-
-## This function will write out to the Modbus Memory Context
-#
-# @param ctxt Memory context to write to
-# @params values Values to write out
-def write_update(ctxt, values):
+	## This function will write out to the Modbus Memory Context
+	#
+	# @param ctxt Memory context to write to
+	# @params values Values to write out
+	def write_update(self, ctxt, values):
+		print("TODO: Write Context")
 
 
 
