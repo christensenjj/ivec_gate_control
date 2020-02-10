@@ -1,3 +1,4 @@
 **/doxygen
 *.pyc
 *.save
+*.save.*

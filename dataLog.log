@@ -6,3 +6,11 @@
 2020-02-06 13:19:54,755 Starting Modbus TCP Server on localhost:5020
 2020-02-06 13:36:41,849 Event: Safe-Stop - Current Overdraw Detected | Position: 0 | Current Draw: 160 
 2020-02-06 13:36:41,850 Starting Modbus TCP Server on localhost:5020
+2020-02-10 12:21:27,504 Event: Safe-Stop - Current Overdraw Detected | Position: 0 | Current Draw: 160 
+2020-02-10 12:21:27,507 Starting Modbus TCP Server on localhost:5020
+2020-02-10 12:21:43,693 Event: Safe-Stop - Current Overdraw Detected | Position: 0 | Current Draw: 160 
+2020-02-10 12:21:43,694 Starting Modbus TCP Server on localhost:5020
+2020-02-10 12:22:40,437 Event: Safe-Stop - Current Overdraw Detected | Position: 0 | Current Draw: 160 
+2020-02-10 12:22:40,438 Starting Modbus TCP Server on localhost:5020
+2020-02-10 12:26:10,561 Event: Safe-Stop - Current Overdraw Detected | Position: 0 | Current Draw: 160 
+2020-02-10 12:26:10,562 Starting Modbus TCP Server on localhost:5020
