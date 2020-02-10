@@ -63,7 +63,7 @@ $(function() {
 </div><!-- top -->
 <div class="header">
   <div class="summary">
-<a href="#func-members">Functions</a>  </div>
+<a href="#nested-classes">Classes</a>  </div>
   <div class="headertitle">
 <div class="title">modbus_driver.py File Reference</div>  </div>
 </div><!--header-->
@@ -72,89 +72,17 @@ $(function() {
 <p>Modbus Driver.  
 <a href="#details">More...</a></p>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
-Functions</h2></td></tr>
-<tr class="memitem:a737c576a95314581ae96f3f5142259db"><td class="memItemLeft" align="right" valign="top"><a id="a737c576a95314581ae96f3f5142259db"></a>
-def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="modbus__driver_8py.html#a737c576a95314581ae96f3f5142259db">modbus_driver.run_async_server</a> ()</td></tr>
-<tr class="memdesc:a737c576a95314581ae96f3f5142259db"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function to configure and start the Modbus Server. <br /></td></tr>
-<tr class="separator:a737c576a95314581ae96f3f5142259db"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afb74a48c4b9a2251e63e05b55633cb41"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="modbus__driver_8py.html#afb74a48c4b9a2251e63e05b55633cb41">modbus_driver.read_context</a> (ctxt)</td></tr>
-<tr class="memdesc:afb74a48c4b9a2251e63e05b55633cb41"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function will read the Modbus Memory Context to check for updates.  <a href="modbus__driver_8py.html#afb74a48c4b9a2251e63e05b55633cb41">More...</a><br /></td></tr>
-<tr class="separator:afb74a48c4b9a2251e63e05b55633cb41"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a38bb913b48cc360c558e6e3967d5ca73"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="modbus__driver_8py.html#a38bb913b48cc360c558e6e3967d5ca73">modbus_driver.write_update</a> (ctxt, values)</td></tr>
-<tr class="memdesc:a38bb913b48cc360c558e6e3967d5ca73"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function will write out to the Modbus Memory Context.  <a href="modbus__driver_8py.html#a38bb913b48cc360c558e6e3967d5ca73">More...</a><br /></td></tr>
-<tr class="separator:a38bb913b48cc360c558e6e3967d5ca73"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+Classes</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmodbus__driver_1_1ModbusDriver.html">modbus_driver.ModbusDriver</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Modbus Driver. </p>
 <dl class="section author"><dt>Author</dt><dd>Jacob Christensen <a href="#" onclick="location.href='mai'+'lto:'+'chr'+'is'+'ten'+'se'+'njj'+'@m'+'soe'+'.e'+'du'; return false;">chris<span style="display: none;">.nosp@m.</span>tens<span style="display: none;">.nosp@m.</span>enjj@<span style="display: none;">.nosp@m.</span>msoe<span style="display: none;">.nosp@m.</span>.edu</a> </dd></dl>
 <dl class="section date"><dt>Date</dt><dd>01/26/2020</dd></dl>
 <p>This file will setup a TCP Modbus Server that monitors and responds to changes in the Modbus memory structure. </p>
-</div><h2 class="groupheader">Function Documentation</h2>
-<a id="afb74a48c4b9a2251e63e05b55633cb41"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#afb74a48c4b9a2251e63e05b55633cb41">&#9670;&nbsp;</a></span>read_context()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">def modbus_driver.read_context </td>
-          <td>(</td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>ctxt</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>This function will read the Modbus Memory Context to check for updates. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">ctxt</td><td>Memory Context to read </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>Values read from memory context </dd></dl>
-
-</div>
-</div>
-<a id="a38bb913b48cc360c558e6e3967d5ca73"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a38bb913b48cc360c558e6e3967d5ca73">&#9670;&nbsp;</a></span>write_update()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">def modbus_driver.write_update </td>
-          <td>(</td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>ctxt</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>values</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>This function will write out to the Modbus Memory Context. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">ctxt</td><td>Memory context to write to @params values Values to write out </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-</div><!-- contents -->
+</div></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Generated by &#160;<a href="http://www.doxygen.org/index.html">

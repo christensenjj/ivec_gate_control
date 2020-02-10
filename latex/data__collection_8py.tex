@@ -5,18 +5,11 @@
 Data Collection.  
 
 
-\doxysubsection*{Functions}
+\doxysubsection*{Classes}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{data__collection_8py_a6706210a8833b99fb3fc51be7f7c69c6}\label{data__collection_8py_a6706210a8833b99fb3fc51be7f7c69c6}} 
-def \mbox{\hyperlink{data__collection_8py_a6706210a8833b99fb3fc51be7f7c69c6}{data\+\_\+collection.\+adc\+\_\+setup}} ()
-\begin{DoxyCompactList}\small\item\em This function will setup the appropriate pins for communication with the Analog-\/to-\/\+Digital converter. \end{DoxyCompactList}\item 
-def \mbox{\hyperlink{data__collection_8py_aea1f6c636d90ca079097f54439ab14a3}{data\+\_\+collection.\+get\+\_\+current}} ()
-\begin{DoxyCompactList}\small\item\em This function will read the current from the Hall Effect sensor. \end{DoxyCompactList}\item 
-def \mbox{\hyperlink{data__collection_8py_add7e990519217f72d054bd68e2000703}{data\+\_\+collection.\+get\+\_\+position}} ()
-\begin{DoxyCompactList}\small\item\em This function will get the position of the actuator by reading the potentiometer value from the A\+DC. \end{DoxyCompactList}\item 
-def \mbox{\hyperlink{data__collection_8py_a0563bc04b8214c79cf726057c88758e7}{data\+\_\+collection.\+write\+\_\+data\+\_\+log}} (info)
-\begin{DoxyCompactList}\small\item\em This function will write out given information to a log file for future access. \end{DoxyCompactList}\end{DoxyCompactItemize}
+class \mbox{\hyperlink{classdata__collection_1_1DataCollection}{data\+\_\+collection.\+Data\+Collection}}
+\begin{DoxyCompactList}\small\item\em This class is used to manage interactions withe A\+DC and sensors. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
@@ -29,46 +22,3 @@ Jacob Christensen \href{mailto:christensenjj@msoe.edu}{\texttt{ christensenjj@ms
 01/26/2020
 \end{DoxyDate}
 This file will hold much of the functionality required for gathering and processing data from the peripherals of the microcontroller. This file will also pieces of the data collected back to the memory for future access. 
-
-\doxysubsection{Function Documentation}
-\mbox{\Hypertarget{data__collection_8py_aea1f6c636d90ca079097f54439ab14a3}\label{data__collection_8py_aea1f6c636d90ca079097f54439ab14a3}} 
-\index{data\_collection.py@{data\_collection.py}!get\_current@{get\_current}}
-\index{get\_current@{get\_current}!data\_collection.py@{data\_collection.py}}
-\doxysubsubsection{\texorpdfstring{get\_current()}{get\_current()}}
-{\footnotesize\ttfamily def data\+\_\+collection.\+get\+\_\+current (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
-
-
-
-This function will read the current from the Hall Effect sensor. 
-
-\begin{DoxyReturn}{Returns}
-\+: A number representing the current being drawn by the actuator 
-\end{DoxyReturn}
-\mbox{\Hypertarget{data__collection_8py_add7e990519217f72d054bd68e2000703}\label{data__collection_8py_add7e990519217f72d054bd68e2000703}} 
-\index{data\_collection.py@{data\_collection.py}!get\_position@{get\_position}}
-\index{get\_position@{get\_position}!data\_collection.py@{data\_collection.py}}
-\doxysubsubsection{\texorpdfstring{get\_position()}{get\_position()}}
-{\footnotesize\ttfamily def data\+\_\+collection.\+get\+\_\+position (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
-
-
-
-This function will get the position of the actuator by reading the potentiometer value from the A\+DC. 
-
-\begin{DoxyReturn}{Returns}
-A number representing the position of the actuator 
-\end{DoxyReturn}
-\mbox{\Hypertarget{data__collection_8py_a0563bc04b8214c79cf726057c88758e7}\label{data__collection_8py_a0563bc04b8214c79cf726057c88758e7}} 
-\index{data\_collection.py@{data\_collection.py}!write\_data\_log@{write\_data\_log}}
-\index{write\_data\_log@{write\_data\_log}!data\_collection.py@{data\_collection.py}}
-\doxysubsubsection{\texorpdfstring{write\_data\_log()}{write\_data\_log()}}
-{\footnotesize\ttfamily def data\+\_\+collection.\+write\+\_\+data\+\_\+log (\begin{DoxyParamCaption}\item[{}]{info }\end{DoxyParamCaption})}
-
-
-
-This function will write out given information to a log file for future access. 
-
-
-\begin{DoxyParams}{Parameters}
-{\em info} & Information to be written \\
-\hline
-\end{DoxyParams}

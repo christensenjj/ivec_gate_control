@@ -29,9 +29,11 @@ def main():
     GPIO.setup_gpio()
     DC.adc_setup()
     loop = LoopingCall(MODBUS.read_context, ctxt=(MODBUS.context,))
+    loop2 = LoopingCall(MODBUS.write_update, ctxt=(MODBUS.context,25,))
     ACTUATOR.set_pwm(70)
     ACTUATOR.set_position(40)
     loop.start(2)
+    loop2.start(5)
     MODBUS.run_async_server()
 
 if __name__ == "__main__":

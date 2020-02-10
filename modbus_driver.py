@@ -46,14 +46,21 @@ class ModbusDriver:
         address  = 0x00
         value = context[slave_id].getValues(register,address)[0]
         print value
+        return value
 
 
     ## This function will write out to the Modbus Memory Context
     #
     # @param ctxt Memory context to write to
     # @params values Values to write out
-    def write_update(self, ctxt, values):
-        print("TODO: Write Context")
+    def write_update(self, ctxt):
+        context  = ctxt[0]
+        value = [ctxt[1]]
+        register = 3
+        slave_id = 0x00
+        address  = 0x00
+        if(value != self.read_context(ctxt)):
+            context[slave_id].setValues(register,address,value)
 
 
 

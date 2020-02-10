@@ -8,7 +8,7 @@ Class to manage signal generation for actuator motion.
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-def \mbox{\hyperlink{classactuator__driver_1_1ActuatorDriver_a6e21c4d35539ad98e670a20dd639f957}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self, \mbox{\hyperlink{classactuator__driver_1_1ActuatorDriver_a6cab15d7c3b27e8009df128a21d1d649}{duty\+\_\+cycle}}, \mbox{\hyperlink{classactuator__driver_1_1ActuatorDriver_a1a5cda3700880889819e96bb9b46fad1}{gr}})
+def \mbox{\hyperlink{classactuator__driver_1_1ActuatorDriver_a26e7f3b3ee96722c5d65640790af530c}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self, \mbox{\hyperlink{classactuator__driver_1_1ActuatorDriver_a6cab15d7c3b27e8009df128a21d1d649}{duty\+\_\+cycle}}, \mbox{\hyperlink{classactuator__driver_1_1ActuatorDriver_a1a5cda3700880889819e96bb9b46fad1}{gr}}, \mbox{\hyperlink{classactuator__driver_1_1ActuatorDriver_acd6efdca9105fed494b4d03ad31b5261}{dc}})
 \begin{DoxyCompactList}\small\item\em This fucntion initializes the Actuator Driver object. \end{DoxyCompactList}\item 
 def \mbox{\hyperlink{classactuator__driver_1_1ActuatorDriver_af4da56b817bf85e84382852e280dffcb}{set\+\_\+position}} (self, position)
 \begin{DoxyCompactList}\small\item\em This function will move the actuator to the set position. \end{DoxyCompactList}\item 
@@ -26,6 +26,9 @@ def \mbox{\hyperlink{classactuator__driver_1_1ActuatorDriver_ab84d285236c48862ac
 \mbox{\Hypertarget{classactuator__driver_1_1ActuatorDriver_a1a5cda3700880889819e96bb9b46fad1}\label{classactuator__driver_1_1ActuatorDriver_a1a5cda3700880889819e96bb9b46fad1}} 
 \mbox{\hyperlink{classactuator__driver_1_1ActuatorDriver_a1a5cda3700880889819e96bb9b46fad1}{gr}}
 \begin{DoxyCompactList}\small\item\em Instance of G\+P\+I\+O\+Ref for access to G\+P\+IO functions. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classactuator__driver_1_1ActuatorDriver_acd6efdca9105fed494b4d03ad31b5261}\label{classactuator__driver_1_1ActuatorDriver_acd6efdca9105fed494b4d03ad31b5261}} 
+\mbox{\hyperlink{classactuator__driver_1_1ActuatorDriver_acd6efdca9105fed494b4d03ad31b5261}{dc}}
+\begin{DoxyCompactList}\small\item\em Instance of Data\+Collection for access to sensor data. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classactuator__driver_1_1ActuatorDriver_a6cab15d7c3b27e8009df128a21d1d649}\label{classactuator__driver_1_1ActuatorDriver_a6cab15d7c3b27e8009df128a21d1d649}} 
 \mbox{\hyperlink{classactuator__driver_1_1ActuatorDriver_a6cab15d7c3b27e8009df128a21d1d649}{duty\+\_\+cycle}}
 \begin{DoxyCompactList}\small\item\em The duty cycle of the P\+WM signal driving the actuator. \end{DoxyCompactList}\item 
@@ -46,18 +49,21 @@ int \mbox{\hyperlink{classactuator__driver_1_1ActuatorDriver_ac9145feae83d35900e
 \begin{DoxyCompactList}\small\item\em Pin for output of pwm signal for moving forward. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classactuator__driver_1_1ActuatorDriver_af1967b0b02731b7892b3e882bf7aabcf}\label{classactuator__driver_1_1ActuatorDriver_af1967b0b02731b7892b3e882bf7aabcf}} 
 int \mbox{\hyperlink{classactuator__driver_1_1ActuatorDriver_af1967b0b02731b7892b3e882bf7aabcf}{pwm\+\_\+rev}} = 32
-\begin{DoxyCompactList}\small\item\em Pin for output of P\+WM signal for moving in reverse. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Pin for output of P\+WM signal for moving in reverse. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classactuator__driver_1_1ActuatorDriver_ae2966e40bac92be2903e3995a33d315b}\label{classactuator__driver_1_1ActuatorDriver_ae2966e40bac92be2903e3995a33d315b}} 
+int \mbox{\hyperlink{classactuator__driver_1_1ActuatorDriver_ae2966e40bac92be2903e3995a33d315b}{relay\+\_\+pin}} = 23
+\begin{DoxyCompactList}\small\item\em Pin to trigger electro-\/mechanical relay. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
 Class to manage signal generation for actuator motion. 
 
 \doxysubsection{Constructor \& Destructor Documentation}
-\mbox{\Hypertarget{classactuator__driver_1_1ActuatorDriver_a6e21c4d35539ad98e670a20dd639f957}\label{classactuator__driver_1_1ActuatorDriver_a6e21c4d35539ad98e670a20dd639f957}} 
+\mbox{\Hypertarget{classactuator__driver_1_1ActuatorDriver_a26e7f3b3ee96722c5d65640790af530c}\label{classactuator__driver_1_1ActuatorDriver_a26e7f3b3ee96722c5d65640790af530c}} 
 \index{actuator\_driver.ActuatorDriver@{actuator\_driver.ActuatorDriver}!\_\_init\_\_@{\_\_init\_\_}}
 \index{\_\_init\_\_@{\_\_init\_\_}!actuator\_driver.ActuatorDriver@{actuator\_driver.ActuatorDriver}}
 \doxysubsubsection{\texorpdfstring{\_\_init\_\_()}{\_\_init\_\_()}}
-{\footnotesize\ttfamily def actuator\+\_\+driver.\+Actuator\+Driver.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{duty\+\_\+cycle,  }\item[{}]{gr }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily def actuator\+\_\+driver.\+Actuator\+Driver.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{duty\+\_\+cycle,  }\item[{}]{gr,  }\item[{}]{dc }\end{DoxyParamCaption})}
 
 
 
@@ -68,6 +74,8 @@ This fucntion initializes the Actuator Driver object.
 {\em duty\+\_\+cycle} & The starting duty\+\_\+cycle of the P\+WM signal \\
 \hline
 {\em gr} & Instance of G\+P\+I\+O\+Ref for access to G\+P\+IO functions \\
+\hline
+{\em dc} & Instance of Data\+Collection for access to sensor data \\
 \hline
 \end{DoxyParams}
 

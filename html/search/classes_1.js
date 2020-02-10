@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['gpioref_36',['GPIORef',['../classgpio__ref_1_1GPIORef.html',1,'gpio_ref']]]
+  ['datacollection_41',['DataCollection',['../classdata__collection_1_1DataCollection.html',1,'data_collection']]]
 ];

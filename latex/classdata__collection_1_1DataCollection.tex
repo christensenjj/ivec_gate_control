@@ -1,0 +1,80 @@
+\hypertarget{classdata__collection_1_1DataCollection}{}\doxysection{data\+\_\+collection.\+Data\+Collection Class Reference}
+\label{classdata__collection_1_1DataCollection}\index{data\_collection.DataCollection@{data\_collection.DataCollection}}
+
+
+This class is used to manage interactions withe A\+DC and sensors.  
+
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classdata__collection_1_1DataCollection_a60016e0f94daeeae581dae1a838d83ba}\label{classdata__collection_1_1DataCollection_a60016e0f94daeeae581dae1a838d83ba}} 
+def {\bfseries \+\_\+\+\_\+init\+\_\+\+\_\+} (self)
+\item 
+\mbox{\Hypertarget{classdata__collection_1_1DataCollection_ab30935a938369b4083587e63d8134d77}\label{classdata__collection_1_1DataCollection_ab30935a938369b4083587e63d8134d77}} 
+def \mbox{\hyperlink{classdata__collection_1_1DataCollection_ab30935a938369b4083587e63d8134d77}{adc\+\_\+setup}} (self)
+\begin{DoxyCompactList}\small\item\em This function will setup the appropriate pins for communication with the Analog-\/to-\/\+Digital converter. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{classdata__collection_1_1DataCollection_ad739852915d281ad24fefaf71aa6c52b}{get\+\_\+current}} (self)
+\begin{DoxyCompactList}\small\item\em This function will read the current from the Hall Effect sensor. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{classdata__collection_1_1DataCollection_ab8ce007089593fb39b35d09f4de2cd8f}{get\+\_\+position}} (self)
+\begin{DoxyCompactList}\small\item\em This function will get the position of the actuator by reading the potentiometer value from the A\+DC. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{classdata__collection_1_1DataCollection_a418389cb4e5e3c477bd865be68b626f3}{write\+\_\+data\+\_\+log}} (self, info)
+\begin{DoxyCompactList}\small\item\em This function will write out given information to a log file for future access. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classdata__collection_1_1DataCollection_a235e9d0ad8cfd0a691671ee206344d47}\label{classdata__collection_1_1DataCollection_a235e9d0ad8cfd0a691671ee206344d47}} 
+\mbox{\hyperlink{classdata__collection_1_1DataCollection_a235e9d0ad8cfd0a691671ee206344d47}{logger}}
+\begin{DoxyCompactList}\small\item\em Data logger for tracking data gathered from sensors. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This class is used to manage interactions withe A\+DC and sensors. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classdata__collection_1_1DataCollection_ad739852915d281ad24fefaf71aa6c52b}\label{classdata__collection_1_1DataCollection_ad739852915d281ad24fefaf71aa6c52b}} 
+\index{data\_collection.DataCollection@{data\_collection.DataCollection}!get\_current@{get\_current}}
+\index{get\_current@{get\_current}!data\_collection.DataCollection@{data\_collection.DataCollection}}
+\doxysubsubsection{\texorpdfstring{get\_current()}{get\_current()}}
+{\footnotesize\ttfamily def data\+\_\+collection.\+Data\+Collection.\+get\+\_\+current (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+This function will read the current from the Hall Effect sensor. 
+
+\begin{DoxyReturn}{Returns}
+\+: A number representing the current being drawn by the actuator 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classdata__collection_1_1DataCollection_ab8ce007089593fb39b35d09f4de2cd8f}\label{classdata__collection_1_1DataCollection_ab8ce007089593fb39b35d09f4de2cd8f}} 
+\index{data\_collection.DataCollection@{data\_collection.DataCollection}!get\_position@{get\_position}}
+\index{get\_position@{get\_position}!data\_collection.DataCollection@{data\_collection.DataCollection}}
+\doxysubsubsection{\texorpdfstring{get\_position()}{get\_position()}}
+{\footnotesize\ttfamily def data\+\_\+collection.\+Data\+Collection.\+get\+\_\+position (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+This function will get the position of the actuator by reading the potentiometer value from the A\+DC. 
+
+\begin{DoxyReturn}{Returns}
+A number representing the position of the actuator 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classdata__collection_1_1DataCollection_a418389cb4e5e3c477bd865be68b626f3}\label{classdata__collection_1_1DataCollection_a418389cb4e5e3c477bd865be68b626f3}} 
+\index{data\_collection.DataCollection@{data\_collection.DataCollection}!write\_data\_log@{write\_data\_log}}
+\index{write\_data\_log@{write\_data\_log}!data\_collection.DataCollection@{data\_collection.DataCollection}}
+\doxysubsubsection{\texorpdfstring{write\_data\_log()}{write\_data\_log()}}
+{\footnotesize\ttfamily def data\+\_\+collection.\+Data\+Collection.\+write\+\_\+data\+\_\+log (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{info }\end{DoxyParamCaption})}
+
+
+
+This function will write out given information to a log file for future access. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em info} & Information string to be written to log file \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{data__collection_8py}{data\+\_\+collection.\+py}}\end{DoxyCompactItemize}

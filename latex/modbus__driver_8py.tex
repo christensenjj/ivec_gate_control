@@ -5,16 +5,11 @@
 Modbus Driver.  
 
 
-\doxysubsection*{Functions}
+\doxysubsection*{Classes}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{modbus__driver_8py_a737c576a95314581ae96f3f5142259db}\label{modbus__driver_8py_a737c576a95314581ae96f3f5142259db}} 
-def \mbox{\hyperlink{modbus__driver_8py_a737c576a95314581ae96f3f5142259db}{modbus\+\_\+driver.\+run\+\_\+async\+\_\+server}} ()
-\begin{DoxyCompactList}\small\item\em Function to configure and start the Modbus Server. \end{DoxyCompactList}\item 
-def \mbox{\hyperlink{modbus__driver_8py_afb74a48c4b9a2251e63e05b55633cb41}{modbus\+\_\+driver.\+read\+\_\+context}} (ctxt)
-\begin{DoxyCompactList}\small\item\em This function will read the Modbus Memory Context to check for updates. \end{DoxyCompactList}\item 
-def \mbox{\hyperlink{modbus__driver_8py_a38bb913b48cc360c558e6e3967d5ca73}{modbus\+\_\+driver.\+write\+\_\+update}} (ctxt, values)
-\begin{DoxyCompactList}\small\item\em This function will write out to the Modbus Memory Context. \end{DoxyCompactList}\end{DoxyCompactItemize}
+class \mbox{\hyperlink{classmodbus__driver_1_1ModbusDriver}{modbus\+\_\+driver.\+Modbus\+Driver}}
+\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
@@ -27,38 +22,3 @@ Jacob Christensen \href{mailto:christensenjj@msoe.edu}{\texttt{ christensenjj@ms
 01/26/2020
 \end{DoxyDate}
 This file will setup a T\+CP Modbus Server that monitors and responds to changes in the Modbus memory structure. 
-
-\doxysubsection{Function Documentation}
-\mbox{\Hypertarget{modbus__driver_8py_afb74a48c4b9a2251e63e05b55633cb41}\label{modbus__driver_8py_afb74a48c4b9a2251e63e05b55633cb41}} 
-\index{modbus\_driver.py@{modbus\_driver.py}!read\_context@{read\_context}}
-\index{read\_context@{read\_context}!modbus\_driver.py@{modbus\_driver.py}}
-\doxysubsubsection{\texorpdfstring{read\_context()}{read\_context()}}
-{\footnotesize\ttfamily def modbus\+\_\+driver.\+read\+\_\+context (\begin{DoxyParamCaption}\item[{}]{ctxt }\end{DoxyParamCaption})}
-
-
-
-This function will read the Modbus Memory Context to check for updates. 
-
-
-\begin{DoxyParams}{Parameters}
-{\em ctxt} & Memory Context to read \\
-\hline
-\end{DoxyParams}
-\begin{DoxyReturn}{Returns}
-Values read from memory context 
-\end{DoxyReturn}
-\mbox{\Hypertarget{modbus__driver_8py_a38bb913b48cc360c558e6e3967d5ca73}\label{modbus__driver_8py_a38bb913b48cc360c558e6e3967d5ca73}} 
-\index{modbus\_driver.py@{modbus\_driver.py}!write\_update@{write\_update}}
-\index{write\_update@{write\_update}!modbus\_driver.py@{modbus\_driver.py}}
-\doxysubsubsection{\texorpdfstring{write\_update()}{write\_update()}}
-{\footnotesize\ttfamily def modbus\+\_\+driver.\+write\+\_\+update (\begin{DoxyParamCaption}\item[{}]{ctxt,  }\item[{}]{values }\end{DoxyParamCaption})}
-
-
-
-This function will write out to the Modbus Memory Context. 
-
-
-\begin{DoxyParams}{Parameters}
-{\em ctxt} & Memory context to write to @params values Values to write out \\
-\hline
-\end{DoxyParams}
