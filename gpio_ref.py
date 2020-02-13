@@ -1,4 +1,4 @@
-## @file gpio_ref.py
+\## @file gpio_ref.py
 # @brief GPIO Reference
 # @author Jacob Christensen <christensenjj@msoe.edu>
 # @date 01/22/2020
@@ -11,10 +11,11 @@ import RPi.GPIO as GPIO
 class GPIORef:
 	## Initialization function for the GPIO Ref Class
 	def __init__(self):
+		## Current IP Address
 		self.ip_address = "127.0.0.1"
+		## Boolean stating if the state is normally open
 		self.normal_open = False
-	## Pin names and numbers
-	## @{
+
 	NO_NC_SW = 7
 	LED_ERROR = 11
 	LED_MOT	= 13
@@ -35,7 +36,6 @@ class GPIORef:
 	IPADDR2 = 28
 	IPADDR1 = 36
 	IPADDR0 = 38
-	## @}
 
 	## A function for setting all of the GPIO pins to their necessary states.
 	def setup_gpio(self):
@@ -53,7 +53,7 @@ class GPIORef:
 	#
 	# @param motion: A boolean value that indicates whether or not the gate is in motion
 	# @param position: An integer in the range 0-100 indicating the position of the gate.
-	# @param error: A boolean value that indicates if an error has occured or if service is needed
+	# @param error: A boolean value that indicates if an error has occurred or if service is needed
 	def set_led_out(self, motion, position, error):
 		print("TODO: set_led_out")
 

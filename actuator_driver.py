@@ -10,7 +10,7 @@ from data_collection import DataCollection
 ## @brief Class to manage signal generation for actuator motion
 class ActuatorDriver:
 
-    ## This fucntion initializes the Actuator Driver object
+    ## This function initializes the Actuator Driver object
     #
     # @param duty_cycle The starting duty_cycle of the PWM signal
     # @param gr Instance of GPIORef for access to GPIO functions

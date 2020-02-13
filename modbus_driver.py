@@ -54,7 +54,7 @@ class ModbusDriver:
     ## This function will write out to the Modbus Memory Context
     #
     # @param ctxt Memory context to write to
-    # @params values Values to write out
+    # @param values Values to write out
     def write_update(self, ctxt):
         context  = ctxt[0]
         value = [ctxt[1]]

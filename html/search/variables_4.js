@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['logger_76',['logger',['../classdata__collection_1_1DataCollection.html#a235e9d0ad8cfd0a691671ee206344d47',1,'data_collection::DataCollection']]]
+  ['ip_5faddress_77',['ip_address',['../classgpio__ref_1_1GPIORef.html#a32d5fa279cbbcd927f0937a97f83bd42',1,'gpio_ref::GPIORef']]]
 ];

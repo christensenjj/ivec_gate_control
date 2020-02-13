@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['no_5fnc_5fsw_78',['NO_NC_SW',['../classgpio__ref_1_1GPIORef.html#a0679f1b50091b4ed00c6091f11bb449f',1,'gpio_ref::GPIORef']]]
+  ['max_5fcurrent_79',['max_current',['../classactuator__driver_1_1ActuatorDriver.html#a651a18d4b927abfad56249bc16612637',1,'actuator_driver::ActuatorDriver']]]
 ];
