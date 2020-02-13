@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['logger_73',['logger',['../classdata__collection_1_1DataCollection.html#a235e9d0ad8cfd0a691671ee206344d47',1,'data_collection::DataCollection']]]
+  ['gr_75',['gr',['../classactuator__driver_1_1ActuatorDriver.html#a1a5cda3700880889819e96bb9b46fad1',1,'actuator_driver::ActuatorDriver']]]
 ];

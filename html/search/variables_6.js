@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['relay_5fpin_77',['relay_pin',['../classactuator__driver_1_1ActuatorDriver.html#ae2966e40bac92be2903e3995a33d315b',1,'actuator_driver::ActuatorDriver']]],
-  ['rev_5fout_78',['rev_out',['../classactuator__driver_1_1ActuatorDriver.html#a36552d2238aa34caf4faef0429780015',1,'actuator_driver::ActuatorDriver']]]
+  ['no_5fnc_5fsw_78',['NO_NC_SW',['../classgpio__ref_1_1GPIORef.html#a0679f1b50091b4ed00c6091f11bb449f',1,'gpio_ref::GPIORef']]]
 ];

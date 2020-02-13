@@ -8,7 +8,7 @@ import logging
 
 ## This class is used to manage interactions withe ADC and sensors
 class DataCollection:
-
+	## Function to setup the DataCollection object
 	def __init__(self):
 		## Data logger for tracking data gathered from sensors
 		self.logger = logging.getLogger()

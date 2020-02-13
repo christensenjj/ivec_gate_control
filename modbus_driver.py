@@ -13,6 +13,7 @@ from pymodbus.transaction import (ModbusRtuFramer,
                                   ModbusAsciiFramer,
                                   ModbusBinaryFramer)
 
+## @brief Class to manage the setup and access for the TCP based Modbus Server
 class ModbusDriver:
     ## Initializes the ModbusDriver Class
     def __init__(self):
@@ -21,6 +22,7 @@ class ModbusDriver:
             co=ModbusSequentialDataBlock(0, [17]*100),
             hr=ModbusSequentialDataBlock(0, [17]*100),
             ir=ModbusSequentialDataBlock(0, [17]*100))
+        ## Reference to the server context for reading from and writing to
         self.context = ModbusServerContext(slaves=store, single=True)
 
     ## Function to configure and start the Modbus Server.

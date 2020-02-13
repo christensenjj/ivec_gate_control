@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['logger_19',['logger',['../classdata__collection_1_1DataCollection.html#a235e9d0ad8cfd0a691671ee206344d47',1,'data_collection::DataCollection']]]
+  ['ivec_20gate_20control_19',['IVEC Gate Control',['../md_README.html',1,'']]]
 ];
