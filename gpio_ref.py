@@ -13,8 +13,8 @@ class GPIORef:
 	def __init__(self):
 		self.ip_address = "127.0.0.1"
 		self.normal_open = False
-	## @{
 	## Pin names and numbers
+	## @{
 	NO_NC_SW = 7
 	LED_ERROR = 11
 	LED_MOT	= 13
