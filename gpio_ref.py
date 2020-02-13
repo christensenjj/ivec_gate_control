@@ -6,12 +6,14 @@
 
 import RPi.GPIO as GPIO
 
+## @brief Class to manage the simple interactions with the GPIO pins
+## Operations that involve generating or reading complex signals are left to the specific drivers
 class GPIORef:
 	## Initialization function for the GPIO Ref Class
 	def __init__(self):
 		self.ip_address = "127.0.0.1"
 		self.normal_open = False
-
+	## @{
 	## Pin names and numbers
 	NO_NC_SW = 7
 	LED_ERROR = 11
@@ -33,6 +35,7 @@ class GPIORef:
 	IPADDR2 = 28
 	IPADDR1 = 36
 	IPADDR0 = 38
+	## @}
 
 	## A function for setting all of the GPIO pins to their necessary states.
 	def setup_gpio(self):
