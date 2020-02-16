@@ -11,18 +11,6 @@ from gpio_ref import GPIORef
 from data_collection import DataCollection
 from modbus_driver import ModbusDriver
 
-
-## Callback for edge event on Normally Open/Closed Switch"
-def ncno_callback():
-    # Changes the Normally Open/Closed setting
-    print "TODO: ncno_callback"
-
-## Callback for edge event on digital input 1
-def di_callback():
-    # Used to trigger the gate sequence from digital input 1
-    print "TODO: di_callback"
-
-
 ## Main execution for control system software
 def main():
     # Setup functions

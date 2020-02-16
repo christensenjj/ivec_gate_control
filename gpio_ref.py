@@ -1,4 +1,4 @@
-\## @file gpio_ref.py
+## @file gpio_ref.py
 # @brief GPIO Reference
 # @author Jacob Christensen <christensenjj@msoe.edu>
 # @date 01/22/2020
@@ -36,6 +36,14 @@ class GPIORef:
 	IPADDR2 = 28
 	IPADDR1 = 36
 	IPADDR0 = 38
+
+        ## Callback for the digital input switch
+        def di_callback(self):
+		print "TODO: DI Callback"
+
+	## Callback for the normally open/closed toggle switch
+	def nonc_callback(self):
+		print "TODO: NCNO Callback"
 
 	## A function for setting all of the GPIO pins to their necessary states.
 	def setup_gpio(self):
