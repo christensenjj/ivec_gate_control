@@ -15,6 +15,7 @@ class GPIORef:
 		self.ip_address = "127.0.0.1"
 		## Boolean stating if the state is normally open
 		self.normal_open = False
+		## Boolean stating if the digital input has been triggered
 
 	NO_NC_SW = 7
 	LED_ERROR = 11
@@ -39,22 +40,37 @@ class GPIORef:
 
         ## Callback for the digital input switch
         def di_callback(self):
-		print "TODO: DI Callback"
+		self.di_trigger = True
+		print "DI Triggered"
 
 	## Callback for the normally open/closed toggle switch
 	def nonc_callback(self):
-		print "TODO: NCNO Callback"
+		self.normal_open ^= True
+		print ("Normal Open: ", self.normal_open)
 
 	## A function for setting all of the GPIO pins to their necessary states.
 	def setup_gpio(self):
 		GPIO.setmode(GPIO.BOARD)
 		GPIO.setwarnings(False)
-		inputs = [7, 8, 10, 12, 16, 18, 22, 24, 26, 28, 36, 38]
+		inputs = [7, 8, 10, 16, 18, 22, 24, 26, 28, 36, 38]
 		GPIO.setup(inputs, GPIO.IN)
+		GPIO.setup(DIGIN, GPIO.IN, pull_up_down=GPIO.PUD_UP)
+		GPIO.add_event_detect(DIGIN, GPIO.FALLING, callback=di_callback)
+		GPIO.add_event_detect(NO_NC_SW, GPIO.BOTH, callback=nonc_callback)
 
 	## A function for retrieving the current IP address, read from the external DIP switch
 	def get_ip_address(self):
-		print("TODO: get_ip_address")
+		host_number = 0
+		host_number |= ((1 if GPIO.input(IPADDR7) == GPIO.HIGH else 0) << 7)
+		host_number |= ((1 if GPIO.input(IPADDR6) == GPIO.HIGH else 0) << 6)
+		host_number |= ((1 if GPIO.input(IPADDR5) == GPIO.HIGH else 0) << 5)
+		host_number |= ((1 if GPIO.input(IPADDR4) == GPIO.HIGH else 0) << 4)
+		host_number |= ((1 if GPIO.input(IPADDR3) == GPIO.HIGH else 0) << 3)
+		host_number |= ((1 if GPIO.input(IPADDR2) == GPIO.HIGH else 0) << 2)
+		host_number |= ((1 if GPIO.input(IPADDR1) == GPIO.HIGH else 0) << 1)
+		host_number |= ((1 if GPIO.input(IPADDR0) == GPIO.HIGH else 0) << 0)
+		self.ip_address = "127.0.0." + str(host_number)
+		print ("IP Address: ", self.ip_address)
 		return self.ip_address
 
 	## A function for setting the status of the LEDs
@@ -69,7 +85,7 @@ class GPIORef:
 	#
 	# @return A boolean value that indicates if a digital input is still active
 	def get_di_states(self):
-		print("TODO: get_di_states")
+		return (True if (GPIO.input(DIGIN) == GPIO.LOW else False)
 
 
 
