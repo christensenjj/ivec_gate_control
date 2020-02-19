@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['max_5fcurrent_79',['max_current',['../classactuator__driver_1_1ActuatorDriver.html#a651a18d4b927abfad56249bc16612637',1,'actuator_driver::ActuatorDriver']]]
+  ['logger_88',['logger',['../classdata__collection_1_1DataCollection.html#a235e9d0ad8cfd0a691671ee206344d47',1,'data_collection::DataCollection']]]
 ];

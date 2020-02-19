@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['adc_5fsetup_53',['adc_setup',['../classdata__collection_1_1DataCollection.html#ab30935a938369b4083587e63d8134d77',1,'data_collection::DataCollection']]]
+  ['adc_5fsetup_59',['adc_setup',['../classdata__collection_1_1DataCollection.html#ab30935a938369b4083587e63d8134d77',1,'data_collection::DataCollection']]]
 ];

@@ -17,16 +17,22 @@ def \mbox{\hyperlink{classgpio__ref_1_1GPIORef_a8207064ef8b8c2fce22d5fb2d54d9b7f
 \mbox{\Hypertarget{classgpio__ref_1_1GPIORef_a0a2a7d0e3872c577dd2b74af8f5681c1}\label{classgpio__ref_1_1GPIORef_a0a2a7d0e3872c577dd2b74af8f5681c1}} 
 def \mbox{\hyperlink{classgpio__ref_1_1GPIORef_a0a2a7d0e3872c577dd2b74af8f5681c1}{nonc\+\_\+callback}} (self)
 \begin{DoxyCompactList}\small\item\em Callback for the normally open/closed toggle switch. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classgpio__ref_1_1GPIORef_ad356422d4eb4591a87a68b74397cff83}\label{classgpio__ref_1_1GPIORef_ad356422d4eb4591a87a68b74397cff83}} 
+def \mbox{\hyperlink{classgpio__ref_1_1GPIORef_ad356422d4eb4591a87a68b74397cff83}{in\+\_\+motion}} (self, flash, \mbox{\hyperlink{classgpio__ref_1_1GPIORef_afc403154f4b2b4f097a28733b2198f4f}{active}})
+\begin{DoxyCompactList}\small\item\em A function to flash the motion L\+ED based on a global variable in a separate thread. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classgpio__ref_1_1GPIORef_a471151428eb275434407726ce372f93b}\label{classgpio__ref_1_1GPIORef_a471151428eb275434407726ce372f93b}} 
 def \mbox{\hyperlink{classgpio__ref_1_1GPIORef_a471151428eb275434407726ce372f93b}{setup\+\_\+gpio}} (self)
 \begin{DoxyCompactList}\small\item\em A function for setting all of the G\+P\+IO pins to their necessary states. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classgpio__ref_1_1GPIORef_a5cccb72df8fa03759703f6376cbd857a}\label{classgpio__ref_1_1GPIORef_a5cccb72df8fa03759703f6376cbd857a}} 
 def \mbox{\hyperlink{classgpio__ref_1_1GPIORef_a5cccb72df8fa03759703f6376cbd857a}{get\+\_\+ip\+\_\+address}} (self)
 \begin{DoxyCompactList}\small\item\em A function for retrieving the current IP address, read from the external D\+IP switch. \end{DoxyCompactList}\item 
-def \mbox{\hyperlink{classgpio__ref_1_1GPIORef_a14c8a6e03702b1224426657ca3ba6f6b}{set\+\_\+led\+\_\+out}} (self, motion, position, error)
+def \mbox{\hyperlink{classgpio__ref_1_1GPIORef_a14c8a6e03702b1224426657ca3ba6f6b}{set\+\_\+led\+\_\+out}} (self, \mbox{\hyperlink{classgpio__ref_1_1GPIORef_a4ca7339f2cd213fd3d5393a8fc5773f4}{motion}}, position, error)
 \begin{DoxyCompactList}\small\item\em A function for setting the status of the L\+E\+Ds. \end{DoxyCompactList}\item 
 def \mbox{\hyperlink{classgpio__ref_1_1GPIORef_a4b174ce41d9fe1f5eefb9777cb614385}{get\+\_\+di\+\_\+states}} (self)
-\begin{DoxyCompactList}\small\item\em A function to get the status of the digital input(s) and indicate whether any of them remain active. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em A function to get the status of the digital input(s) and indicate whether any of them remain active. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classgpio__ref_1_1GPIORef_addf93f3bec75ec93c2b035602d8a1a7c}\label{classgpio__ref_1_1GPIORef_addf93f3bec75ec93c2b035602d8a1a7c}} 
+def \mbox{\hyperlink{classgpio__ref_1_1GPIORef_addf93f3bec75ec93c2b035602d8a1a7c}{gpio\+\_\+cleanup}} (self)
+\begin{DoxyCompactList}\small\item\em Method to cleanup the G\+P\+IO assignments. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Public Attributes}
 \begin{DoxyCompactItemize}
 \item 
@@ -35,7 +41,16 @@ def \mbox{\hyperlink{classgpio__ref_1_1GPIORef_a4b174ce41d9fe1f5eefb9777cb614385
 \begin{DoxyCompactList}\small\item\em Current IP Address. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classgpio__ref_1_1GPIORef_a31eac87c6aad42aad6496e24a36e9fa2}\label{classgpio__ref_1_1GPIORef_a31eac87c6aad42aad6496e24a36e9fa2}} 
 \mbox{\hyperlink{classgpio__ref_1_1GPIORef_a31eac87c6aad42aad6496e24a36e9fa2}{normal\+\_\+open}}
-\begin{DoxyCompactList}\small\item\em Boolean stating if the state is normally open. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Boolean stating if the state is normally open. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classgpio__ref_1_1GPIORef_a4ca7339f2cd213fd3d5393a8fc5773f4}\label{classgpio__ref_1_1GPIORef_a4ca7339f2cd213fd3d5393a8fc5773f4}} 
+\mbox{\hyperlink{classgpio__ref_1_1GPIORef_a4ca7339f2cd213fd3d5393a8fc5773f4}{motion}}
+\begin{DoxyCompactList}\small\item\em Boolean stating whether to flash the motion L\+ED or not. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classgpio__ref_1_1GPIORef_af53a6d82ac8b6a1e1ad84239bc3c9e47}\label{classgpio__ref_1_1GPIORef_af53a6d82ac8b6a1e1ad84239bc3c9e47}} 
+\mbox{\hyperlink{classgpio__ref_1_1GPIORef_af53a6d82ac8b6a1e1ad84239bc3c9e47}{motion\+\_\+thread}}
+\begin{DoxyCompactList}\small\item\em Thread to manage the L\+ED Flashing. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classgpio__ref_1_1GPIORef_afc403154f4b2b4f097a28733b2198f4f}\label{classgpio__ref_1_1GPIORef_afc403154f4b2b4f097a28733b2198f4f}} 
+\mbox{\hyperlink{classgpio__ref_1_1GPIORef_afc403154f4b2b4f097a28733b2198f4f}{active}}
+\begin{DoxyCompactList}\small\item\em Boolean to keep L\+ED thread alive. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Static Public Attributes}
 \begin{DoxyCompactItemize}
 \item 
@@ -100,8 +115,8 @@ int {\bfseries I\+P\+A\+D\+D\+R1} = 36
 int {\bfseries I\+P\+A\+D\+D\+R0} = 38
 \item 
 \mbox{\Hypertarget{classgpio__ref_1_1GPIORef_a61462516146bc99af612287777997d6a}\label{classgpio__ref_1_1GPIORef_a61462516146bc99af612287777997d6a}} 
-{\bfseries di\+\_\+trigger}
-\end{DoxyCompactItemize}
+\mbox{\hyperlink{classgpio__ref_1_1GPIORef_a61462516146bc99af612287777997d6a}{di\+\_\+trigger}}
+\begin{DoxyCompactList}\small\item\em Boolean stating if the digital input has been triggered. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}

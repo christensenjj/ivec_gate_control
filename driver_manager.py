@@ -10,6 +10,7 @@ from actuator_driver import ActuatorDriver
 from gpio_ref import GPIORef
 from data_collection import DataCollection
 from modbus_driver import ModbusDriver
+import time
 
 ## Main execution for control system software
 def main():
@@ -23,6 +24,7 @@ def main():
     loop.start(2)
     loop2.start(5)
     MODBUS.run_async_server()
+    GPIO.gpio_cleanup()
 
 if __name__ == "__main__":
     # Instantiate the GPIO reference object
