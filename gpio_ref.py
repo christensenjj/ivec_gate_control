@@ -19,6 +19,8 @@ class GPIORef:
 		self.normal_open = False
 		## Boolean stating if the digital input has been triggered
 		self.di_trigger = False
+		## Reference time for the last DI trigger
+		self.di_trigger_time = 0
 		## Boolean stating whether to flash the motion LED or not
 		self.motion = False
 		## Thread to manage the LED Flashing
@@ -49,7 +51,9 @@ class GPIORef:
 
 	## Callback for the digital input switch
         def di_callback(self):
-		self.di_trigger = True
+		self.di_trigger = True if (GPIO.input(self.DIGIN) == GPIO.LOW) else False
+		if not self.di_trigger :
+			self.di_trigger_time = time.time() * 1000
 		print "DI Triggered"
 
 	## Callback for the normally open/closed toggle switch
@@ -73,10 +77,25 @@ class GPIORef:
 	def setup_gpio(self):
 		GPIO.setmode(GPIO.BOARD)
 		GPIO.setwarnings(False)
+		# Outputs
+		GPIO.setup(self.LED_ERROR, GPIO.OUT)
 		GPIO.setup(self.LED_MOT, GPIO.OUT)
+		GPIO.setup(self.LED_CLOSED, GPIO.OUT)
+		GPIO.setup(self.LED_INT, GPIO.OUT)
+		GPIO.setup(self.LED_OPEN, GPIO.OUT)
+		# Inputs
+		GPIO.setup(self.IPADDR0, GPIO.IN)
+		GPIO.setup(self.IPADDR1, GPIO.IN)
+		GPIO.setup(self.IPADDR2, GPIO.IN)
+		GPIO.setup(self.IPADDR3, GPIO.IN)
+		GPIO.setup(self.IPADDR4, GPIO.IN)
+		GPIO.setup(self.IPADDR5, GPIO.IN)
+		GPIO.setup(self.IPADDR6, GPIO.IN)
+		GPIO.setup(self.IPADDR7, GPIO.IN)
+		GPIO.setup(self.MFAULT, GPIO.IN)
 		GPIO.setup(self.DIGIN, GPIO.IN, pull_up_down=GPIO.PUD_UP)
 		GPIO.setup(self.NO_NC_SW, GPIO.IN, pull_up_down=GPIO.PUD_UP)
-		GPIO.add_event_detect(self.DIGIN, GPIO.FALLING, callback=self.di_callback)
+		GPIO.add_event_detect(self.DIGIN, GPIO.BOTH, callback=self.di_callback)
 		GPIO.add_event_detect(self.NO_NC_SW, GPIO.BOTH, callback=self.nonc_callback)
 		self.motion_thread = Thread(target = self.in_motion, args=(lambda : self.motion, lambda : self.active, ))
 		self.active = True
