@@ -26,7 +26,7 @@ class DataCollection:
 	# @returns: A number representing the current being drawn by the actuator
 	def get_current(self):
 		print("TODO: get_current")
-		return 160
+		return 120
 
 	##This function will get the position of the actuator by reading the potentiometer value from the ADC.
 	# @returns A number representing the position of the actuator

@@ -15,13 +15,15 @@ import time
 
 ## Open/Close the gate based on digital input or MODBUS command
 def gate_action():
+    print "Loop Call"
     if(not GPIO.motion):
+        print "Loop not in Motion"
         if(GPIO.get_di_states()) :
             if(GPIO.normal_open) :
                 ACTUATOR.set_position(0)
             else :
                 ACTUATOR.set_position(100)
-        elif((time.time() * 1000) - GPIO.di_trigger_time) < 15000) :
+        elif(((time.time() * 1000) - GPIO.di_trigger_time) < 15000) :
             ACTUATOR.set_position(100)
         else :
             ACTUATOR.set_position(MODBUS.read_context((MODBUS.context,)))

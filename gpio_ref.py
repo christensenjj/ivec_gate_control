@@ -123,6 +123,7 @@ class GPIORef:
 	# @param error: A boolean value that indicates if an error has occurred or if service is needed
 	def set_led_out(self, motion, position, error):
 		self.motion = motion
+		print motion
 		print("TODO: set_led_out")
 
 	## A function to get the status of the digital input(s) and indicate whether any of them remain active.
