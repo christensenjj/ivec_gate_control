@@ -24,6 +24,8 @@ class ModbusDriver:
             ir=ModbusSequentialDataBlock(0, [17]*100))
         ## Reference to the server context for reading from and writing to
         self.context = ModbusServerContext(slaves=store, single=True)
+	## Variable to determine if communcation with the TCP server is active
+	self.communicating = False
 
     ## Function to configure and start the Modbus Server.
     def run_async_server(self):
@@ -34,8 +36,10 @@ class ModbusDriver:
         identity.ProductName = 'Pymodbus Server'
         identity.ModelName = 'Pymodbus Server'
         identity.MajorMinorRevision = '2.3.0'
+	self.communicating = True
         ## Start TCP Server
         StartTcpServer(self.context, identity=identity, address=("localhost", 5020))
+	self.communicating = False
 
     ##This function will read the Modbus Memory Context to check for updates
     #

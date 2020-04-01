@@ -32,7 +32,6 @@ def gate_action():
 def main():
     # Setup functions
     GPIO.setup_gpio()
-    DC.adc_setup()
     ACTUATOR.set_pwm(70)
     ACTUATOR.set_position(40)
     loop = LoopingCall(gate_action)

@@ -16,7 +16,7 @@ class GPIORef:
 		## Current IP Address
 		self.ip_address = "127.0.0.1"
 		## Boolean stating if the state is normally open
-		self.normal_open = False
+		self.normal_open = True
 		## Boolean stating if the digital input has been triggered
 		self.di_trigger = False
 		## Reference time for the last DI trigger
@@ -58,7 +58,7 @@ class GPIORef:
 
 	## Callback for the normally open/closed toggle switch
 	def nonc_callback(self):
-		self.normal_open ^= True
+		self.normal_open = True if (GPIO.input(self.NO_NC_SW) == GPIO.LOW) else False
 		print ("Normal Open: ", self.normal_open)
 
 
@@ -123,8 +123,23 @@ class GPIORef:
 	# @param error: A boolean value that indicates if an error has occurred or if service is needed
 	def set_led_out(self, motion, position, error):
 		self.motion = motion
-		print motion
-		print("TODO: set_led_out")
+		if(position == 0):
+			GPIO.output(self.LED_OPEN, GPIO.HIGH)
+			GPIO.output(self.LED_CLOSED, GPIO.LOW)
+			GPIO.output(self.LED_INT, GPIO.LOW)
+		elif(position < 100):
+			GPIO.output(self.LED_OPEN, GPIO.LOW)
+			GPIO.output(self.LED_CLOSED, GPIO.LOW)
+			GPIO.output(self.LED_INT, GPIO.HIGH)
+		else:
+			GPIO.output(self.LED_OPEN, GPIO.LOW)
+			GPIO.output(self.LED_CLOSED, GPIO.HIGH)
+			GPIO.output(self.LED_INT, GPIO.LOW)
+
+		if error :
+			GPIO.output(self.LED_ERR, GPIO.HIGH)
+		else:
+			GPIO.
 
 	## A function to get the status of the digital input(s) and indicate whether any of them remain active.
 	#

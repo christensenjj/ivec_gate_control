@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['adc_5fsetup_59',['adc_setup',['../classdata__collection_1_1DataCollection.html#ab30935a938369b4083587e63d8134d77',1,'data_collection::DataCollection']]]
+  ['di_5fcallback_65',['di_callback',['../classgpio__ref_1_1GPIORef.html#a8207064ef8b8c2fce22d5fb2d54d9b7f',1,'gpio_ref::GPIORef']]]
 ];

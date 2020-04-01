@@ -11,9 +11,6 @@ This class is used to manage interactions with the A\+D\+Cs and sensors.
 \mbox{\Hypertarget{classdata__collection_1_1DataCollection_a60016e0f94daeeae581dae1a838d83ba}\label{classdata__collection_1_1DataCollection_a60016e0f94daeeae581dae1a838d83ba}} 
 def \mbox{\hyperlink{classdata__collection_1_1DataCollection_a60016e0f94daeeae581dae1a838d83ba}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self)
 \begin{DoxyCompactList}\small\item\em Function to setup the \mbox{\hyperlink{classdata__collection_1_1DataCollection}{Data\+Collection}} object. \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{classdata__collection_1_1DataCollection_ab30935a938369b4083587e63d8134d77}\label{classdata__collection_1_1DataCollection_ab30935a938369b4083587e63d8134d77}} 
-def \mbox{\hyperlink{classdata__collection_1_1DataCollection_ab30935a938369b4083587e63d8134d77}{adc\+\_\+setup}} (self)
-\begin{DoxyCompactList}\small\item\em This function will setup the appropriate pins for communication with the Analog-\/to-\/\+Digital converter. \end{DoxyCompactList}\item 
 def \mbox{\hyperlink{classdata__collection_1_1DataCollection_ad739852915d281ad24fefaf71aa6c52b}{get\+\_\+current}} (self)
 \begin{DoxyCompactList}\small\item\em This function will read the current from the Hall Effect sensor. \end{DoxyCompactList}\item 
 def \mbox{\hyperlink{classdata__collection_1_1DataCollection_ab8ce007089593fb39b35d09f4de2cd8f}{get\+\_\+position}} (self)
@@ -25,7 +22,25 @@ def \mbox{\hyperlink{classdata__collection_1_1DataCollection_a418389cb4e5e3c477b
 \item 
 \mbox{\Hypertarget{classdata__collection_1_1DataCollection_a235e9d0ad8cfd0a691671ee206344d47}\label{classdata__collection_1_1DataCollection_a235e9d0ad8cfd0a691671ee206344d47}} 
 \mbox{\hyperlink{classdata__collection_1_1DataCollection_a235e9d0ad8cfd0a691671ee206344d47}{logger}}
-\begin{DoxyCompactList}\small\item\em Data logger for tracking data gathered from sensors. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Data logger for tracking data gathered from sensors. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classdata__collection_1_1DataCollection_ab85dd76171deb5ac935d8e5696018e96}\label{classdata__collection_1_1DataCollection_ab85dd76171deb5ac935d8e5696018e96}} 
+\mbox{\hyperlink{classdata__collection_1_1DataCollection_ab85dd76171deb5ac935d8e5696018e96}{adc1}}
+\begin{DoxyCompactList}\small\item\em A\+DC objects for reading information from the sensors. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classdata__collection_1_1DataCollection_a25e733b6be7a2adf54d7c5e0a669161c}\label{classdata__collection_1_1DataCollection_a25e733b6be7a2adf54d7c5e0a669161c}} 
+{\bfseries adc2}
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classdata__collection_1_1DataCollection_af43ad96446b1b976faa22383eced640f}\label{classdata__collection_1_1DataCollection_af43ad96446b1b976faa22383eced640f}} 
+int \mbox{\hyperlink{classdata__collection_1_1DataCollection_af43ad96446b1b976faa22383eced640f}{G\+A\+IN}} = 1
+\begin{DoxyCompactList}\small\item\em Gain to be used when reading from the sensors. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classdata__collection_1_1DataCollection_a65e974f8fcc058a0a081c5ded4aedcd1}\label{classdata__collection_1_1DataCollection_a65e974f8fcc058a0a081c5ded4aedcd1}} 
+int \mbox{\hyperlink{classdata__collection_1_1DataCollection_a65e974f8fcc058a0a081c5ded4aedcd1}{C\+U\+R\+R\+E\+NT}} = 1
+\begin{DoxyCompactList}\small\item\em Current sensor channel. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classdata__collection_1_1DataCollection_ad70a5139de162c4e8dba64d40ac2d42b}\label{classdata__collection_1_1DataCollection_ad70a5139de162c4e8dba64d40ac2d42b}} 
+int \mbox{\hyperlink{classdata__collection_1_1DataCollection_ad70a5139de162c4e8dba64d40ac2d42b}{P\+O\+S\+I\+T\+I\+ON}} = 2
+\begin{DoxyCompactList}\small\item\em Postion sensor channel. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}

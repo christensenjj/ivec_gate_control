@@ -69,6 +69,7 @@ $(function() {
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-attribs">Public Attributes</a> &#124;
+<a href="#pub-static-attribs">Static Public Attributes</a> &#124;
 <a href="classdata__collection_1_1DataCollection-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">data_collection.DataCollection Class Reference</div>  </div>
@@ -84,10 +85,6 @@ Public Member Functions</h2></td></tr>
 def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdata__collection_1_1DataCollection.html#a60016e0f94daeeae581dae1a838d83ba">__init__</a> (self)</td></tr>
 <tr class="memdesc:a60016e0f94daeeae581dae1a838d83ba"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function to setup the <a class="el" href="classdata__collection_1_1DataCollection.html" title="This class is used to manage interactions with the ADCs and sensors.">DataCollection</a> object. <br /></td></tr>
 <tr class="separator:a60016e0f94daeeae581dae1a838d83ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab30935a938369b4083587e63d8134d77"><td class="memItemLeft" align="right" valign="top"><a id="ab30935a938369b4083587e63d8134d77"></a>
-def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdata__collection_1_1DataCollection.html#ab30935a938369b4083587e63d8134d77">adc_setup</a> (self)</td></tr>
-<tr class="memdesc:ab30935a938369b4083587e63d8134d77"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function will setup the appropriate pins for communication with the Analog-to-Digital converter. <br /></td></tr>
-<tr class="separator:ab30935a938369b4083587e63d8134d77"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad739852915d281ad24fefaf71aa6c52b"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdata__collection_1_1DataCollection.html#ad739852915d281ad24fefaf71aa6c52b">get_current</a> (self)</td></tr>
 <tr class="memdesc:ad739852915d281ad24fefaf71aa6c52b"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function will read the current from the Hall Effect sensor.  <a href="classdata__collection_1_1DataCollection.html#ad739852915d281ad24fefaf71aa6c52b">More...</a><br /></td></tr>
 <tr class="separator:ad739852915d281ad24fefaf71aa6c52b"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -104,6 +101,28 @@ Public Attributes</h2></td></tr>
 &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdata__collection_1_1DataCollection.html#a235e9d0ad8cfd0a691671ee206344d47">logger</a></td></tr>
 <tr class="memdesc:a235e9d0ad8cfd0a691671ee206344d47"><td class="mdescLeft">&#160;</td><td class="mdescRight">Data logger for tracking data gathered from sensors. <br /></td></tr>
 <tr class="separator:a235e9d0ad8cfd0a691671ee206344d47"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab85dd76171deb5ac935d8e5696018e96"><td class="memItemLeft" align="right" valign="top"><a id="ab85dd76171deb5ac935d8e5696018e96"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdata__collection_1_1DataCollection.html#ab85dd76171deb5ac935d8e5696018e96">adc1</a></td></tr>
+<tr class="memdesc:ab85dd76171deb5ac935d8e5696018e96"><td class="mdescLeft">&#160;</td><td class="mdescRight">ADC objects for reading information from the sensors. <br /></td></tr>
+<tr class="separator:ab85dd76171deb5ac935d8e5696018e96"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a25e733b6be7a2adf54d7c5e0a669161c"><td class="memItemLeft" align="right" valign="top"><a id="a25e733b6be7a2adf54d7c5e0a669161c"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>adc2</b></td></tr>
+<tr class="separator:a25e733b6be7a2adf54d7c5e0a669161c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-attribs"></a>
+Static Public Attributes</h2></td></tr>
+<tr class="memitem:af43ad96446b1b976faa22383eced640f"><td class="memItemLeft" align="right" valign="top"><a id="af43ad96446b1b976faa22383eced640f"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdata__collection_1_1DataCollection.html#af43ad96446b1b976faa22383eced640f">GAIN</a> = 1</td></tr>
+<tr class="memdesc:af43ad96446b1b976faa22383eced640f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gain to be used when reading from the sensors. <br /></td></tr>
+<tr class="separator:af43ad96446b1b976faa22383eced640f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a65e974f8fcc058a0a081c5ded4aedcd1"><td class="memItemLeft" align="right" valign="top"><a id="a65e974f8fcc058a0a081c5ded4aedcd1"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdata__collection_1_1DataCollection.html#a65e974f8fcc058a0a081c5ded4aedcd1">CURRENT</a> = 1</td></tr>
+<tr class="memdesc:a65e974f8fcc058a0a081c5ded4aedcd1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Current sensor channel. <br /></td></tr>
+<tr class="separator:a65e974f8fcc058a0a081c5ded4aedcd1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad70a5139de162c4e8dba64d40ac2d42b"><td class="memItemLeft" align="right" valign="top"><a id="ad70a5139de162c4e8dba64d40ac2d42b"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdata__collection_1_1DataCollection.html#ad70a5139de162c4e8dba64d40ac2d42b">POSITION</a> = 2</td></tr>
+<tr class="memdesc:ad70a5139de162c4e8dba64d40ac2d42b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Postion sensor channel. <br /></td></tr>
+<tr class="separator:ad70a5139de162c4e8dba64d40ac2d42b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>This class is used to manage interactions with the ADCs and sensors. </p>
