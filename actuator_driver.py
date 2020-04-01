@@ -79,7 +79,7 @@ class ActuatorDriver:
     #
     # Motion will be in the "closing" direction
     def start_fwd(self):
-	GPIO.output(self.relay_pin, GPIO.HIGH)
+        GPIO.output(self.relay_pin, GPIO.HIGH)
         self.rev_out.stop()
         self.fwd_out.start(self.duty_cycle)
 
@@ -87,7 +87,7 @@ class ActuatorDriver:
     #
     # Motion will be in the "opening" direction
     def start_bwd(self):
-	GPIO.output(self.relay_pin, GPIO.HIGH)
+        GPIO.output(self.relay_pin, GPIO.HIGH)
         self.fwd_out.stop()
         self.rev_out.start(self.duty_cycle)
 
@@ -95,7 +95,7 @@ class ActuatorDriver:
     #
     # Halt the generation of the PWM signals
     def stop_actuator(self):
-	GPIO.output(self.relay_pin, GPIO.LOW)
+        GPIO.output(self.relay_pin, GPIO.LOW)
         self.fwd_out.stop()
         self.rev_out.stop()
 
